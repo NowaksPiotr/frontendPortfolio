@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  height: 200vh;
+}
+
+.bg {
+  height: 100vh;
+  background: url("../assets/bg_hd1920x180.png");
+  background-size: contain;
+  opacity: 0;
+}
+
+.bg:hover {
+  opacity: 1;
+  -webkit-transition: 10s;
+  transition: 10s;
+}
+/*# sourceMappingURL=style.css.map */
