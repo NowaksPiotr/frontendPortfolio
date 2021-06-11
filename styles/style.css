@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Noto Serif TC', serif;
 }
 
 @media (max-width: 575.98px) {
@@ -10,15 +11,18 @@ html, body {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: 100vw;
+    z-index: 9999;
   }
-  .navigation {
+  .nav__wrapper .navigation {
     margin: 0;
     padding: 0;
-    position: relative;
+    position: fixed;
+    top: -200vw;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     list-style: none;
+    height: 50vh;
     width: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27,19 +31,46 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e66465), to(#671c3b));
+    background: linear-gradient(#e66465, #671c3b);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
   }
-  .navigation .navigation__item {
+  .nav__wrapper .navigation__item {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: .5em;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+  .nav__wrapper .navigation__item .navigation__link {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    padding: .5em 1em .5em 1em;
+    text-decoration: none;
+  }
+  .nav__wrapper .navigation--show {
+    top: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .navigation__mobile-button {
-    position: absolute;
+    position: fixed;
     margin: 2em;
     top: 0;
     right: 0;
@@ -73,10 +104,22 @@ html, body {
             transform: translateX(2.27273vw);
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    background: white;
   }
   .navigation__mobile-button--on::before, .navigation__mobile-button--on::after {
     -webkit-transform: translateX(-2.27273vw);
             transform: translateX(-2.27273vw);
   }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: url(../assets/bg_samsungS5.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=style.css.map */

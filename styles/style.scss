@@ -1,5 +1,16 @@
 html, body{
     margin: 0;
     padding: 0;
+    font-family: 'Noto Serif TC', serif;
 }
 @import "./navigation";
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: url(../assets/bg_samsungS5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
