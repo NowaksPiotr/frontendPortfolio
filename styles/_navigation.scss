@@ -1,8 +1,4 @@
-// Variables
-$deviceWidth: 100vw;
-$transitionDurationHalfSec: 0.5s;
-$colorWhite: rgb(255, 255, 255);
-$menuBackgroundColor: rgb(103, 28, 59);
+@import "./variables.scss";
 
 // Very small devices
 @media (max-width: 575.98px) {
@@ -12,7 +8,7 @@ $menuBackgroundColor: rgb(103, 28, 59);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     z-index: 9999;
     .navigation {
       margin: 0;

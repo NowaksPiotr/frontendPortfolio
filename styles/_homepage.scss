@@ -1,0 +1,91 @@
+@import "./variables";
+
+//  Very small devices
+@media (max-width: 575.98px) {
+  .background__wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+    height: $deviceHeight;
+    width: $deviceWidth;
+    .background__picture {
+      height: $deviceHeight;
+      width: $deviceWidth;
+    }
+    picture {
+      position: absolute;
+      height: $deviceHeight;
+    }
+  }
+  .portrait__wrapper{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $deviceHeight;
+      width: $deviceWidth;
+      .portrait__photo-bg{
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          height: 50vw;
+          width: 50vw;
+          background-color: $colorWhite;
+          box-shadow: 0px -10px 20px rgb(177, 177, 177);
+          border-radius: 50%;
+
+      }
+      .portrait__photo-image{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-45%);
+          width: 50%;
+          z-index: 10;
+      }
+  }
+  .homeText{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $deviceHeight;
+      width: $deviceWidth;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .homeText__wrapper{
+          font-family: 'Bungee Inline', cursive;
+          height: 60vh;
+          width: $deviceWidth;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          .test{
+            font-size: 1.5em;
+            text-align: center;
+          }
+          .test2{
+              font-size: 1.2em;
+              text-align: center;
+              color: $colorWhite;
+          }
+      }
+  }
+  .aboutMe{
+      height: 100vh;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
