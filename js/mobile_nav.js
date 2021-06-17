@@ -1,8 +1,12 @@
 // Variables
-
+// ** Variavbles for hamburger menu
 let mobileNavList = document.querySelector(".navigation");
 let hamburgerMenuLink = document.querySelectorAll(".navigation__link");
 let mobileNavBtn = document.querySelector(".navigation__mobile-button");
+// **
+
+let menuLink = document.querySelectorAll(".navigation__link");
+// **** HAMBURGER MENU **** //
 
 // Toggle function to open hamburger menu
 
@@ -22,3 +26,15 @@ hamburgerMenuLink.forEach(function toggler(link, index) {
       mobileNavBtn.classList.remove("navigation__mobile-button--on");
       mobileNavList.classList.remove("navigation--show");
 }});
+
+// ********************* //
+
+menuLink.forEach(function activeItem(link, index){
+  link.addEventListener("click", ()=>{
+    let activeLink = document.querySelector(".navigation__link--active");
+    if(activeLink){
+      activeLink.classList.remove("navigation__link--active");
+    }
+    menuLink[index].classList.add("navigation__link--active");
+  })
+})

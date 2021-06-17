@@ -162,6 +162,9 @@ html, body {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
+  .navigation .navigation__item .navigation__link--active {
+    text-shadow: -4px -8px 2px #fdc331, -8px -16px 4px #671c3b;
+  }
 }
 
 @media (max-width: 575.98px) {
