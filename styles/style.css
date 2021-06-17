@@ -5,26 +5,30 @@ html, body {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 575.98px) {
-  .nav__wrapper {
-    font-family: 'Bungee Inline', cursive;
-    position: relative;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    width: 100%;
-    z-index: 9999;
-  }
-  .nav__wrapper .navigation {
+.navigation__mobile-button {
+  display: none;
+}
+
+.nav__wrapper {
+  font-family: "Bungee Inline", cursive;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  z-index: 9999;
+}
+
+@media (max-width: 767.98px) {
+  .navigation {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: -200vw;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    top: -1000vw;
+    opacity: 0;
     -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     list-style: none;
-    height: 55vh;
     width: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -45,7 +49,7 @@ html, body {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
   }
-  .nav__wrapper .navigation__item {
+  .navigation__item {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -56,27 +60,32 @@ html, body {
     -ms-flex-line-pack: center;
         align-content: center;
     padding: 0.5em;
-    margin: 0.5em;
   }
-  .nav__wrapper .navigation__item .navigation__link {
-    font-size: 1.5em;
+  .navigation__item .navigation__link {
+    font-size: 1.2em;
+    width: 100%;
     color: white;
-    padding: .5em 1em .5em 1em;
+    padding: 0.5em 1em 0.5em 1em;
     text-decoration: none;
+    text-align: center;
   }
-  .nav__wrapper .navigation--show {
+  .navigation--show {
     top: 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    opacity: 1;
   }
   .navigation__mobile-button {
     position: fixed;
+    display: block;
     margin: 2em;
     top: 0;
     right: 0;
     border: none;
     background: black;
     width: 5.88235vw;
+    min-width: 10px;
+    max-width: 35px;
     height: 3px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -86,6 +95,8 @@ html, body {
     left: 0;
     content: "";
     width: inherit;
+    min-width: inherit;
+    max-width: inherit;
     height: inherit;
     background: inherit;
   }
@@ -109,6 +120,47 @@ html, body {
   .navigation__mobile-button--on::before, .navigation__mobile-button--on::after {
     -webkit-transform: translateX(-2.27273vw);
             transform: translateX(-2.27273vw);
+  }
+}
+
+@media (min-width: 767.99px) {
+  .navigation {
+    position: fixed;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0.5em 0 0.5em 0;
+    width: inherit;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #0caf0c;
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  }
+  .navigation .navigation__item:last-child {
+    margin: 0 1em 0 0;
+  }
+  .navigation .navigation__item {
+    padding: 0.5em;
+  }
+  .navigation .navigation__item .navigation__link {
+    font-size: 1.5em;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+  }
+  .navigation .navigation__item .navigation__link:hover {
+    text-shadow: -4px -8px 0 #fdc331, -8px -16px #671c3b;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 
@@ -175,7 +227,7 @@ html, body {
             align-items: center;
   }
   .homeText .homeText__wrapper {
-    font-family: 'Bungee Inline', cursive;
+    font-family: "Bungee Inline", cursive;
     height: 60vh;
     width: 100vw;
     display: -webkit-box;
