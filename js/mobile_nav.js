@@ -27,7 +27,9 @@ hamburgerMenuLink.forEach(function toggler(link, index) {
       mobileNavList.classList.remove("navigation--show");
 }});
 
-// ********************* //
+//********************************* //
+
+// Function for active menu
 
 menuLink.forEach(function activeItem(link, index){
   link.addEventListener("click", ()=>{
@@ -38,3 +40,5 @@ menuLink.forEach(function activeItem(link, index){
     menuLink[index].classList.add("navigation__link--active");
   })
 })
+
+//********************************* //
