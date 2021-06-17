@@ -59,7 +59,7 @@ html, body {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    padding: 0.5em;
+    padding: .5em 0 .5em 0;
   }
   .navigation__item .navigation__link {
     font-size: 1.2em;
@@ -78,9 +78,9 @@ html, body {
   .navigation__mobile-button {
     position: fixed;
     display: block;
-    margin: 2em;
-    top: 0;
-    right: 0;
+    margin: 0;
+    top: 2em;
+    right: 2em;
     border: none;
     background: black;
     width: 5.88235vw;
@@ -174,11 +174,11 @@ html, body {
     left: 0;
     z-index: -9999;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
   .background__wrapper .background__picture {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
   .background__wrapper picture {
     position: absolute;
@@ -189,7 +189,7 @@ html, body {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
   .portrait__wrapper .portrait__photo-bg {
     position: relative;
@@ -218,7 +218,7 @@ html, body {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -232,7 +232,7 @@ html, body {
   .homeText .homeText__wrapper {
     font-family: "Bungee Inline", cursive;
     height: 60vh;
-    width: 100vw;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
