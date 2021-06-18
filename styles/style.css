@@ -167,31 +167,45 @@ html, body {
   }
 }
 
-@media (max-width: 575.98px) {
-  .background__wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: -9999;
-    height: 100vh;
-    width: 100%;
-  }
-  .background__wrapper .background__picture {
-    height: 100vh;
-    width: 100%;
-  }
-  .background__wrapper picture {
-    position: absolute;
-    height: 100vh;
-  }
-  .portrait__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-  }
-  .portrait__wrapper .portrait__photo-bg {
+.background__wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  height: 100vh;
+  width: 100%;
+}
+
+.background__wrapper .background__picture {
+  height: inherit;
+  width: 100%;
+}
+
+.background__wrapper picture {
+  position: absolute;
+  height: inherit;
+}
+
+.portrait__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.portrait__photo-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-45%);
+          transform: translateX(-50%) translateY(-45%);
+  width: 50%;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .portrait__photo-bg {
     position: relative;
     top: 50%;
     left: 50%;
@@ -204,7 +218,7 @@ html, body {
             box-shadow: 0px -10px 20px #b1b1b1;
     border-radius: 50%;
   }
-  .portrait__wrapper .portrait__photo-image {
+  .portrait__photo-image {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -248,11 +262,9 @@ html, body {
             align-items: center;
   }
   .homeText .homeText__wrapper .test {
-    font-size: 1.5em;
     text-align: center;
   }
   .homeText .homeText__wrapper .test2 {
-    font-size: 1.2em;
     text-align: center;
     color: white;
   }
