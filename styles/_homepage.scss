@@ -31,8 +31,16 @@
   width: 50%;
   z-index: 10;
 }
+.aboutMe {
+  height: 100vh;
+}
+@media (orientation: landscape){
+  .portrait__photo-image{
+    width: 10%;
+  }
+}
 //  Phones and tablets
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
   .portrait__photo-bg {
     position: relative;
     top: 50%;
@@ -52,7 +60,7 @@
     width: 50%;
     z-index: 10;
   }
-  .homeText {
+  .home-text__wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .homeText__wrapper {
+    .home-text__container {
       font-family: "Bungee Inline", cursive;
       height: 60vh;
       width: 100%;
@@ -69,19 +77,76 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      .test {
+      .title-main {
         text-align: center;
       }
-      .test2 {
+      .title-name {
         text-align: center;
         color: $colorWhite;
       }
     }
   }
-  .aboutMe {
-    height: 100vh;
+}
+@media (orientation: landscape){
+  .portrait__photo-bg{
+    height: $deviceHeight/3;
+    width: $deviceHeight/3;
+  }
+  .portrait__photo-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-45%);
+    width: 20%;
+    z-index: 10;
   }
 }
+
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
+@media (min-width: 1024px) {
+  .portrait__photo-bg {
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 25vw;
+    width: 25vw;
+    background-color: $colorWhite;
+    box-shadow: 0px -10px 20px rgb(177, 177, 177);
+    border-radius: 50%;
+  }
+  .portrait__photo-image {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateX(-50%) translateY(-45%);
+    width: 25%;
+    z-index: 10;
+  }
+  .home-text__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $deviceHeight;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home-text__container {
+      font-family: "Bungee Inline", cursive;
+      height: 25vh;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .title-main, .title-name {
+        width: 100%;
+        text-align: right;
+      }
+      .title-name {
+        color: $colorWhite;
+      }
+    }
+  }
 }
