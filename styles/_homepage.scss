@@ -12,7 +12,6 @@
     width: 100%;
   }
   picture {
-    position: absolute;
     height: inherit;
   }
 }
@@ -34,8 +33,8 @@
 .aboutMe {
   height: 100vh;
 }
-@media (orientation: landscape){
-  .portrait__photo-image{
+@media (orientation: landscape) {
+  .portrait__photo-image {
     width: 10%;
   }
 }
@@ -77,18 +76,18 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      .title-main {
+      .title-main,
+      .title-name {
         text-align: center;
       }
       .title-name {
-        text-align: center;
         color: $colorWhite;
       }
     }
   }
 }
-@media (orientation: landscape){
-  .portrait__photo-bg{
+@media (orientation: landscape) {
+  .portrait__photo-bg {
     height: $deviceHeight/3;
     width: $deviceHeight/3;
   }
@@ -103,7 +102,7 @@
 }
 
 // Medium devices (tablets, less than 992px)
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1920px) {
   .portrait__photo-bg {
     position: relative;
     top: 50%;
@@ -140,7 +139,8 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      .title-main, .title-name {
+      .title-main,
+      .title-name {
         width: 100%;
         text-align: right;
       }
@@ -148,5 +148,38 @@
         color: $colorWhite;
       }
     }
+  }
+}
+@media (min-width: 1921px) {
+  .portrait__wrapper {
+    display: grid;
+    grid-template-columns: 7.5% 7.5% 35% 35% 7.5% 7.5%;
+    .portrait__photo-bg {
+      grid-column: 3/4;
+      height: 15vw;
+      width: 15vw;
+      background: $colorWhite;
+      border-radius: 50%;
+      align-self: center;
+      box-shadow: 0px -10px 20px rgb(177, 177, 177);
+    }
+    .portrait__photo{
+      position:absolute;
+      top: 50%;
+      grid-column: 3/4;
+      width: 50%;
+      .portrait__photo-image{
+        position: relative;
+        left: 45%;
+        width: 100%;
+      }
+    }
+  }
+  .home-text__wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 7.5% 7.5% 35% 35% 7.5% 7.5%;
   }
 }

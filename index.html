@@ -1,61 +1,113 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Dev Piotr Nowak</title>
-    <meta name="description" content="Beggining Frontend Dev with a lot of enthusiasm and good will. Please gib money.">
-    <meta property="og:title" content="Frontend Dev Piotr Nowak">
-    <meta property="og:description" content="Beggining Frontend Dev with a lot of enthusiasm and good will. Please gib money.">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://nowakspiotr.github.io/frontendPortfolio/">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Beggining Frontend Dev with a lot of enthusiasm and good will. Please gib money."
+    />
+    <meta property="og:title" content="Frontend Dev Piotr Nowak" />
+    <meta
+      property="og:description"
+      content="Beggining Frontend Dev with a lot of enthusiasm and good will. Please gib money."
+    />
+    <meta property="og:image" content="" />
+    <meta
+      property="og:url"
+      content="https://nowakspiotr.github.io/frontendPortfolio/"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bevan&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <nav class="nav__wrapper">
-        <ul class="navigation">
-            <li class="navigation__item"><a href="#home" class="navigation__link navigation__link--active">Home</a></li>
-            <li class="navigation__item"><a href="#o-mnie" class="navigation__link">O mnie</a></li>
-            <li class="navigation__item"><a href="#projekty" class="navigation__link">Projekty</a></li>
-            <li class="navigation__item"><a href="#kontakt" class="navigation__link">Kontakt</a></li>
-        </ul>
-        <button type="button" class="navigation__mobile-button" aria-label="Show menu"></button>
+      <ul class="navigation">
+        <li class="navigation__item">
+          <a href="#home" class="navigation__link navigation__link--active"
+            >Home</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a href="#o-mnie" class="navigation__link">O mnie</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#projekty" class="navigation__link">Projekty</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#kontakt" class="navigation__link">Kontakt</a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="navigation__mobile-button"
+        aria-label="Show menu"
+      ></button>
     </nav>
 
-<!-- HOME PAGE -->
+    <!-- HOME PAGE -->
 
     <div id="home" class="background__wrapper">
-        <picture>
-            <source media="(max-width: 539.98px)" srcset="./assets/bg_samsungS5.png">
-            <source media="(max-width: 719px)" srcset="./assets/bg_iPad3&4&Air.png">
-            <source media="(max-width: 719px)" srcset="./assets/bg_hd1920x180.png">
-            <img class="background__picture" src="./assets/bg_hd1920x180.png" alt="background-colors">
-        </picture>
+      <picture>
+        <source
+          media="(max-width: 539.98px)"
+          srcset="./assets/bg_samsungS5.png"
+        />
+        <source
+          media="(max-width: 719px)"
+          srcset="./assets/bg_iPad3&4&Air.png"
+        />
+        <source
+          media="(max-width: 719px)"
+          srcset="./assets/bg_hd1920x180.png"
+        />
+        <source
+          media="(max-width: 1920px)"
+          srcset="./assets/bg_hd1920x180.png"
+        />
+        <img
+          class="background__picture"
+          src="./assets/4k.png"
+          alt="background-colors"
+        />
+      </picture>
     </div>
     <div class="portrait__wrapper">
-        <div class="portrait__photo-bg"></div>
-        <div class="portrait__photo">
-            <img class="portrait__photo-image" src="./assets/portrait/1623509629947.png" alt="Face of the best frontend dev">
-        </div>
+      <div class="portrait__photo-bg"></div>
+      <div class="portrait__photo">
+        <img
+          class="portrait__photo-image"
+          src="./assets/portrait/1623509629947.png"
+          alt="Face of the best frontend dev"
+        />
+      </div>
     </div>
     <div class="home-text__wrapper">
-        <div class="home-text__container">
-            <h1 class="title-main">Frontend Developer</h1>
-            <h2 class="title-name">Piotr Nowak</h2>
-        </div>
+      <div class="home-text__container">
+        <h1 class="title-main">Frontend Developer</h1>
+        <h2 class="title-name">Piotr Nowak</h2>
+      </div>
     </div>
 
-<!-- HOME PAGE END -->
-<!-- ABOUT ME PAGE -->
-        <section id="o-mnie" class="aboutMe">
-
-        </section>
-
+    <!-- HOME PAGE END -->
+    <!-- MAIN CONTENT -->
+    <main>
+      <section id="o-mnie" class="aboutMe"></section>
+    </main>
     <script src="./js/mobile_nav.js"></script>
-</body>
+  </body>
 </html>
