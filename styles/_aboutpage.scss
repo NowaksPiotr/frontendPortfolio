@@ -1,0 +1,43 @@
+@import "./variables";
+
+.o-mnie__wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  .o-mnie__title{
+      width: 100%;
+      position: relative;
+  }
+}
+// Phones and tablets
+@media (max-width: 1023.98px) {
+    .o-mnie__title{
+        position: relative;
+        padding: 5.5em 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .o-mnie__text{
+        font-size: 1.5em;
+    }
+    .cv-card__wrapper{
+        position: relative;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+    .o-mnie__title{
+        width: 100%;
+        position: relative;
+        top: 6em;
+        .o-mnie__text{
+            position: absolute;
+            top: 0;
+            left: 2em;
+        }
+    }
+}
+
+// Anything wider than 1921px
+@media (min-width: 1921px) {
+}
