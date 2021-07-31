@@ -30,8 +30,8 @@
   width: 50%;
   z-index: 10;
 }
-.aboutMe {
-  height: 100vh;
+.o-mnie__wrapper {
+  min-height: 100vh;
 }
 @media (orientation: landscape) {
   .portrait__photo-image {

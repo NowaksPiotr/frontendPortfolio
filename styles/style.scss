@@ -1,7 +1,6 @@
 @import "./variables";
 @import "./navigation";
 @import "./homepage";
-@import "./aboutpage";
 
 *{
   margin: 0;
@@ -14,7 +13,4 @@ body {
 }
 body{
     background: $mainBodyColor;
-}
-.span__bold{
-  font-weight: bold;
 }
