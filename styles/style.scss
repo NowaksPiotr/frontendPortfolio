@@ -14,3 +14,7 @@ body {
 body{
     background: $mainBodyColor;
 }
+.main__content{
+  position: relative;
+  box-sizing: border-box;
+}

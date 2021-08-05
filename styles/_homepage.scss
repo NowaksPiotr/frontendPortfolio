@@ -30,9 +30,6 @@
   width: 50%;
   z-index: 10;
 }
-.o-mnie__wrapper {
-  min-height: 100vh;
-}
 @media (orientation: landscape) {
   .portrait__photo-image {
     width: 10%;
@@ -83,6 +80,17 @@
       .title-name {
         color: $colorWhite;
       }
+    }
+  }
+  
+  // SECTION O MNIE
+  .o-mnie__wrapper{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 2.5em;
+    .o-mnie__title{
+      width: 100%;
+      padding: 1em 0 1em 0;
     }
   }
 }
