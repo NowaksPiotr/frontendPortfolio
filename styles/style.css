@@ -271,13 +271,74 @@
             box-sizing: border-box;
     min-height: 100vh;
     width: 100%;
-    padding-top: 2.5em;
+    padding-top: 3.5em;
   }
   .main-section__wrapper .main-section__title {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
     padding: 1em 0 1em 1em;
+  }
+  .main-section__wrapper .description-card__wrapper,
+  .main-section__wrapper .description__card--hobby {
+    position: relative;
+    font-family: "Zilla Slab", serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(1em, 1fr))[12];
+        grid-template-columns: repeat(12, minmax(1em, 1fr));
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    row-gap: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-section__wrapper .description-card__wrapper .description__header,
+  .main-section__wrapper .description__card--hobby .description__header {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .main-section__wrapper .description-card__wrapper .description__header .header__text,
+  .main-section__wrapper .description__card--hobby .description__header .header__text {
+    font-weight: bold;
+  }
+  .main-section__wrapper .description-card__wrapper .description__card,
+  .main-section__wrapper .description__card--hobby .description__card {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .main-section__wrapper .description-card__wrapper .description__tiger-image,
+  .main-section__wrapper .description__card--hobby .description__tiger-image {
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 4;
+    grid-column: 8/12;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    width: 100%;
+    -webkit-filter: drop-shadow(10px 15px 3px #f0353c);
+            filter: drop-shadow(10px 15px 3px #f0353c);
+  }
+  .main-section__wrapper .description-card__wrapper .description__card--hobby,
+  .main-section__wrapper .description__card--hobby .description__card--hobby {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
   }
 }
 
