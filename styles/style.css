@@ -266,14 +266,18 @@
   .home-text__wrapper .home-text__container .title-name {
     color: white;
   }
-  .o-mnie__wrapper {
+  .main-section__wrapper {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     min-height: 100vh;
     width: 100%;
     padding-top: 2.5em;
   }
-  .o-mnie__wrapper .o-mnie__title {
+  .main-section__wrapper .main-section__title {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 100%;
-    padding: 1em 0 1em 0;
+    padding: 1em 0 1em 1em;
   }
 }
 

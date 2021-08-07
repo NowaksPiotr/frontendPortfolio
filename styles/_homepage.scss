@@ -84,13 +84,15 @@
   }
   
   // SECTION O MNIE
-  .o-mnie__wrapper{
+  .main-section__wrapper{
+    box-sizing: border-box;
     min-height: 100vh;
     width: 100%;
     padding-top: 2.5em;
-    .o-mnie__title{
+    .main-section__title{
+      box-sizing: border-box;
       width: 100%;
-      padding: 1em 0 1em 0;
+      padding: 1em 0 1em 1em;
     }
   }
 }
