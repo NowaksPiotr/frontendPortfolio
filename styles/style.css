@@ -165,7 +165,8 @@
   top: 0;
   left: 0;
   z-index: -9999;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100%;
 }
 
@@ -339,6 +340,24 @@
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
+  }
+  .main-section__wrapper .description-card__wrapper .description__card--hobby .description__header--hobby,
+  .main-section__wrapper .description__card--hobby .description__card--hobby .description__header--hobby {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .main-section__wrapper .description-card__wrapper .description__card--hobby .hobby__list,
+  .main-section__wrapper .description__card--hobby .description__card--hobby .hobby__list {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-column: 3/9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
   }
 }
 

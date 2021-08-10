@@ -5,7 +5,8 @@
   top: 0;
   left: 0;
   z-index: -9999;
-  height: $deviceHeight;
+  min-height: $deviceHeight;
+  min-height: -webkit-fill-available;
   width: 100%;
   .background__picture {
     height: inherit;
@@ -125,9 +126,19 @@
       .description__card--hobby {
         grid-column: 2/12;
         grid-row: 3/4;
+        .description__header--hobby{
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        .hobby__list{
+          grid-column: 3/9;
+          grid-row: 2/3;
+        }
       }
     }
   }
+  // SECTION PROJEKTY
+  
 }
 @media (orientation: landscape) {
   .portrait__photo-bg {
