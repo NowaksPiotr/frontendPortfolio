@@ -66,7 +66,7 @@
     justify-content: center;
     align-items: center;
     .home-text__container {
-      font-family: "Bungee Inline", cursive;
+      font-family: $mainBigHeadersFont;
       height: 60vh;
       width: 100%;
       display: flex;
@@ -97,7 +97,7 @@
     .description-card__wrapper,
     .description__card--hobby {
       position: relative;
-      font-family: "Zilla Slab", serif;
+      font-family: $regularTextFont;
       box-sizing: border-box;
       width: 100%;
       display: grid;
@@ -140,18 +140,21 @@
   .projects-examples {
     width: 100%;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(1em, 1fr));
-    grid-template-rows: repeat(5, minmax(18em, auto));
-    row-gap: 2em;
-    @for $i from 1 through 5 {
-      .project-example__card:nth-child(#{$i}) {
-        grid-column: 2/12;
-        grid-row: #{$i}/#{$i + 1};
-      }
+    display: flex;
+    padding: 0 10% 0 10%;
+    flex-direction: column;
+    // grid-template-columns: repeat(12, minmax(1em, 1fr));
+    // grid-template-rows: repeat(5, minmax(18em, auto));
+    // row-gap: 2em;
+    // @for $i from 1 through 5 {
+    //   .project-example__card:nth-child(#{$i}) {
+    //     grid-column: 2/12;
+    //     grid-row: #{$i}/#{$i + 1};
+    //   }
       .project-example__card {
         position: relative;
         width: 100%;
+        min-height: 15em;
         box-sizing: border-box;
         border: 1px solid black;
         overflow: hidden;
@@ -177,15 +180,57 @@
           width: 100%;
           z-index: -1;
         }
-        .project-description__buttons{
+        .project-description__buttons--wrapper {
           width: 100%;
           position: absolute;
           bottom: 0;
+          display: flex;
+          justify-content: space-around;
+          .project-description__button {
+            width: 49%;
+            height: 3em;
+            opacity: 1;
+            border: none;
+            background: $yellowMainColor;
+            font-family: $mainBigHeadersFont;
+            font-size: 1em;
+          }
         }
       }
     }
   }
-}
+  // SECTION CONTACT
+  .description__card--contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(1em, 1fr));
+    .card__contact {
+      grid-column: 2/12;
+      .contact__text {
+        font-family: $regularTextFont;
+      }
+    }
+  }
+  // FOOTER
+  .footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $menuBackgroundColor;
+    .footer__wrapper{
+      width: 100%;
+      .footer__text{
+        width: inherit;
+        font-family: $mainBigHeadersFont;
+        font-size: .8em;
+        color: $colorWhite;
+        text-align: center;
+      }
+    }
+  }
+
 @media (orientation: landscape) {
   .portrait__photo-bg {
     height: $deviceHeight/3;
@@ -232,7 +277,7 @@
     justify-content: center;
     align-items: center;
     .home-text__container {
-      font-family: "Bungee Inline", cursive;
+      font-family: $mainBigHeadersFont;
       height: 25vh;
       width: 70%;
       display: flex;

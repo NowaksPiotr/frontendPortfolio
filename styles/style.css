@@ -242,7 +242,7 @@
             align-items: center;
   }
   .home-text__wrapper .home-text__container {
-    font-family: "Bungee Inline", cursive;
+    font-family: "Bevan", cursive;
     height: 60vh;
     width: 100%;
     display: -webkit-box;
@@ -362,25 +362,19 @@
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(1em, 1fr))[12];
-        grid-template-columns: repeat(12, minmax(1em, 1fr));
-    -ms-grid-rows: (minmax(18em, auto))[5];
-        grid-template-rows: repeat(5, minmax(18em, auto));
-    row-gap: 2em;
-  }
-  .projects-examples .project-example__card:nth-child(1) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2/12;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10% 0 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .projects-examples .project-example__card {
     position: relative;
     width: 100%;
+    min-height: 15em;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border: 1px solid black;
@@ -410,191 +404,68 @@
     width: 100%;
     z-index: -1;
   }
-  .projects-examples .project-example__card .project-description__buttons {
+  .projects-examples .project-example__card .project-description__buttons--wrapper {
     width: 100%;
     position: absolute;
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .projects-examples .project-example__card:nth-child(2) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2/12;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
+  .projects-examples .project-example__card .project-description__buttons--wrapper .project-description__button {
+    width: 49%;
+    height: 3em;
+    opacity: 1;
+    border: none;
+    background: #fdc331;
+    font-family: "Bevan", cursive;
+    font-size: 1em;
   }
-  .projects-examples .project-example__card {
-    position: relative;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 1px solid black;
-    overflow: hidden;
-  }
-  .projects-examples .project-example__card .project-example__description--hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    opacity: 0;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project-example__description--hover:hover {
-    background: #671c3b;
-    opacity: 0.8;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project__thumb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  .projects-examples .project-example__card .project-description__buttons {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  .projects-examples .project-example__card:nth-child(3) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2/12;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
-  }
-  .projects-examples .project-example__card {
-    position: relative;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 1px solid black;
-    overflow: hidden;
-  }
-  .projects-examples .project-example__card .project-example__description--hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    opacity: 0;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project-example__description--hover:hover {
-    background: #671c3b;
-    opacity: 0.8;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project__thumb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  .projects-examples .project-example__card .project-description__buttons {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  .projects-examples .project-example__card:nth-child(4) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2/12;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    grid-row: 4/5;
-  }
-  .projects-examples .project-example__card {
-    position: relative;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 1px solid black;
-    overflow: hidden;
-  }
-  .projects-examples .project-example__card .project-example__description--hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    opacity: 0;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project-example__description--hover:hover {
-    background: #671c3b;
-    opacity: 0.8;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project__thumb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  .projects-examples .project-example__card .project-description__buttons {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  .projects-examples .project-example__card:nth-child(5) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2/12;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
-    grid-row: 5/6;
-  }
-  .projects-examples .project-example__card {
-    position: relative;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 1px solid black;
-    overflow: hidden;
-  }
-  .projects-examples .project-example__card .project-example__description--hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    opacity: 0;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project-example__description--hover:hover {
-    background: #671c3b;
-    opacity: 0.8;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
-  }
-  .projects-examples .project-example__card .project__thumb {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  .projects-examples .project-example__card .project-description__buttons {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
+}
+
+.description__card--contact {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(1em, 1fr))[12];
+      grid-template-columns: repeat(12, minmax(1em, 1fr));
+}
+
+.description__card--contact .card__contact {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+}
+
+.description__card--contact .card__contact .contact__text {
+  font-family: "Zilla Slab", serif;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #0caf0c;
+}
+
+.footer .footer__wrapper {
+  width: 100%;
+}
+
+.footer .footer__wrapper .footer__text {
+  width: inherit;
+  font-family: "Bevan", cursive;
+  font-size: .8em;
+  color: white;
+  text-align: center;
 }
 
 @media (orientation: landscape) {
@@ -653,7 +524,7 @@
             align-items: center;
   }
   .home-text__wrapper .home-text__container {
-    font-family: "Bungee Inline", cursive;
+    font-family: "Bevan", cursive;
     height: 25vh;
     width: 70%;
     display: -webkit-box;
