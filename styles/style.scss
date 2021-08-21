@@ -21,6 +21,9 @@ body{
 .main__content{
   position: relative;
   box-sizing: border-box;
-  padding: 0 15% 0 15%;
+  padding: 2em 15% 2em 15%;
+  background: url(../assets/retro_content_bg.jpg);
+  background-position: center;
+  background-size: cover;
 }
 @import "./media";
