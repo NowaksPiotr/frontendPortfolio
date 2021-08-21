@@ -407,11 +407,12 @@ body {
           box-sizing: border-box;
   padding: 2em 15% 2em 15%;
   background: url(../assets/retro_content_bg.jpg);
-  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 2767.98px) {
   .navigation {
     margin: 0;
     padding: 0;
@@ -470,6 +471,7 @@ body {
   .navigation__mobile-button {
     position: fixed;
     display: block;
+    cursor: pointer;
     margin: 0;
     top: 2em;
     right: 2em;
