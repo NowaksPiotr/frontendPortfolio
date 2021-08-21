@@ -1,35 +1,4 @@
 @import "./variables";
-
-.background__wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: -9999;
-  height: $deviceHeight;
-  width: 100%;
-  .background__picture {
-    height: inherit;
-    width: 100%;
-  }
-  picture {
-    height: inherit;
-  }
-}
-.portrait__wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: $deviceHeight;
-  width: 100%;
-}
-.portrait__photo-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-45%);
-  width: 50%;
-  z-index: 10;
-}
 .main__content {
   padding: 0 15% 0 15%;
 }
@@ -91,7 +60,18 @@
     }
   }
 }
-
+// SECTION CONTACT
+.description__card--contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .card{
+    width: 75%;
+    .card__text {
+      font-family: $regularTextFont;
+    }
+  }
+}
 @media (orientation: landscape) {
   .portrait__photo-image {
     width: 10%;
@@ -199,18 +179,6 @@
           }
         }
       }
-    }
-  }
-}
-// SECTION CONTACT
-.description__card--contact {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(1em, 1fr));
-  .card__contact {
-    grid-column: 2/12;
-    .contact__text {
-      font-family: $regularTextFont;
     }
   }
 }

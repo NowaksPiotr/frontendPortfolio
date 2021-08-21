@@ -77,10 +77,7 @@
           media="(max-width: 719px)"
           srcset="./assets/bg_iPad3&4&Air.png"
         />
-        <source
-          media="(max-width: 719px)"
-          srcset="./assets/bg_hd1920x180.png"
-        />
+        <source media="(max-width: 1920)" srcset="./assets/bg_hd1920x180.png" />
         <source
           media="(max-width: 1920px)"
           srcset="./assets/bg_hd1920x180.png"
@@ -92,20 +89,23 @@
         />
       </picture>
     </div>
-    <div class="portrait__wrapper">
-      <div class="portrait__photo-bg"></div>
-      <div class="portrait__photo">
-        <img
-          class="portrait__photo-image"
-          src="./assets/portrait/1623509629947.png"
-          alt="Face of the best frontend dev"
-        />
+    <div class="home-content__wrapper">
+      <div class="portrait__wrapper">
+        <div class="portrait__photo-bg">
+          <div class="portrait__photo">
+            <img
+              class="portrait__photo-image"
+              src="./assets/portrait/1623509629947.png"
+              alt="Face of the best frontend dev"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="home-text__wrapper">
-      <div class="home-text__container">
-        <h1 class="title-main">Frontend Developer</h1>
-        <h2 class="title-name">Piotr Nowak</h2>
+      <div class="home-text__wrapper">
+        <div class="home-text__container">
+          <h1 class="title-main">Frontend Developer</h1>
+          <h2 class="title-name">Piotr Nowak</h2>
+        </div>
       </div>
     </div>
 
@@ -364,8 +364,8 @@
           </header>
         </div>
         <div class="description__card--contact">
-          <div class="card__contact">
-            <p class="contact__text">
+          <div class="card">
+            <p class="card__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
               blanditiis tempore. Corporis neque iusto quas similique iste
               molestias dolorem perspiciatis consectetur, voluptatum labore

@@ -1,0 +1,71 @@
+@import "./variables";
+
+// GENERAL *********************************************
+
+// GENERAL *********************************************
+
+// WELCOMING PAGE***************************************
+.background__wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  height: $deviceHeight;
+  width: 100%;
+  .background__picture {
+    height: inherit;
+    width: 100%;
+  }
+  picture {
+    height: inherit;
+  }
+}
+.home-content__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  height: $deviceHeight;
+  width: 100%;
+  .portrait__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .portrait__photo-bg {
+      position: relative;
+      height: 25vw;
+      max-height: 680px;
+      width: 25vw;
+      max-width: 680px;
+      background-color: $colorWhite;
+      box-shadow: 0px -10px 20px rgb(177, 177, 177);
+      border-radius: 50%;
+    }
+    .portrait__photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .portrait__photo-image {
+        width: 100%;
+      }
+    }
+  }
+  .home-text__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    .home-text__container{
+      text-align: center;
+    }
+  }
+}
+// WELCOMING PAGE***************************************
+
+// ABOUT-ME PAGE****************************************
+
+// ABOUT-ME PAGE****************************************

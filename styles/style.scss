@@ -1,6 +1,9 @@
 @import "./variables";
 @import "./navigation";
-@import "./homepage";
+// @import "./homepage";
+@import "./components";
+@import "./media";
+
 // font-family: 'Zilla Slab', serif;
 // Zdjęcie autorstwa Olga Lioncat z Pexels
 
@@ -19,4 +22,5 @@ body{
 .main__content{
   position: relative;
   box-sizing: border-box;
+  padding: 0 15% 0 15%;
 }
