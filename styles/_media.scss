@@ -84,6 +84,7 @@
   // Hamburger menu button end  //
 }
 // NAVIGATION BAR ******************************************
+// WELCOME PAGE ********************************************
 @media (max-width: 500px) {
   .home-content__wrapper {
     .portrait__wrapper {
@@ -133,6 +134,36 @@
       .portrait__photo-bg {
         height: 20vw;
         width: 20vw;
+      }
+    }
+  }
+}
+// WELCOME PAGE ********************************************
+
+//**********************************************************
+@media (min-width: 501px){
+  .main__content{
+    .main-section__wrapper{
+      .description-card__wrapper{
+        .description__header{
+          font-size: 1.3em;
+        }
+      }
+      .description__text{
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .main__content {
+    padding: 0 5% 0 5%;
+    .main-section__wrapper {
+      padding-top: 3em;
+      .description-card__wrapper{
+        .description__tiger-image{
+          grid-column: 8/12;
+        }
       }
     }
   }
