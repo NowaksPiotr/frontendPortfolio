@@ -473,7 +473,7 @@ body {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    padding: .5em 0 .5em 0;
+    padding: 0.5em 0 0.5em 0;
   }
   .navigation__item .navigation__link {
     font-size: 1.2em;
@@ -581,6 +581,12 @@ body {
   .home-content__wrapper .portrait__wrapper .portrait__photo-bg {
     height: 20vw;
     width: 20vw;
+  }
+}
+
+@media (min-width: 1023px) {
+  .footer .footer__wrapper .footer__text {
+    font-size: 1em;
   }
 }
 

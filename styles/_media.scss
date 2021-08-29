@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: .5em 0 .5em 0;
+    padding: 0.5em 0 0.5em 0;
     .navigation__link {
       font-size: 1.2em;
       width: 100%;
@@ -115,14 +115,14 @@
     }
   }
 }
-@media (min-width: 1440px){
-  .home-content__wrapper{
-    .home-text__wrapper{
+@media (min-width: 1440px) {
+  .home-content__wrapper {
+    .home-text__wrapper {
       font-size: 1.8em;
     }
   }
 }
-@media (orientation: landscape){
+@media (orientation: landscape) {
   .home-content__wrapper {
     .home-text__wrapper {
       padding: 0 0 2em 0;
@@ -139,16 +139,27 @@
 }
 // WELCOME PAGE ********************************************
 
+// FOOTER **************************************************
+@media (min-width: 1023px) {
+  .footer {
+    .footer__wrapper {
+      .footer__text {
+        font-size: 1em;
+      }
+    }
+  }
+}
+// FOOTER **************************************************
 //**********************************************************
-@media (min-width: 501px){
-  .main__content{
-    .main-section__wrapper{
-      .description-card__wrapper{
-        .description__header{
+@media (min-width: 501px) {
+  .main__content {
+    .main-section__wrapper {
+      .description-card__wrapper {
+        .description__header {
           font-size: 1.3em;
         }
       }
-      .description__text{
+      .description__text {
         font-size: 1.2em;
       }
     }
@@ -159,11 +170,11 @@
     padding: 2em 5% 2em 5%;
     .main-section__wrapper {
       padding-top: 3em;
-      .description-card__wrapper{
-        .description__card{
+      .description-card__wrapper {
+        .description__card {
           grid-column: 2/12;
         }
-        .description__tiger-image{
+        .description__tiger-image {
           display: none;
         }
       }
