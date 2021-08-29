@@ -5,17 +5,12 @@
 .nav__wrapper {
   font-family: "Bungee Inline", cursive;
   position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   width: 100%;
   z-index: 9999;
 }
 
 .nav__wrapper .navigation {
   position: fixed;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0.5em 0 0.5em 0;
   width: inherit;
@@ -66,8 +61,6 @@
 }
 
 .main-section__wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding-top: 4.5em;
   margin: 0 0 4em 0;
   min-height: 100vh;
@@ -168,18 +161,18 @@
 }
 
 .main__content .main-section__wrapper .main-section__title {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 100%;
   padding: 1em 0 1em 1em;
+}
+
+.main__content .main-section__wrapper .main-section__title .header__main {
+  padding-left: 0.5em;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper,
 .main__content .main-section__wrapper .description__card--hobby {
   position: relative;
   font-family: "Zilla Slab", serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -231,8 +224,8 @@
           filter: drop-shadow(10px 15px 3px #f0353c);
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--hobby,
-.main__content .main-section__wrapper .description__card--hobby .description__card--hobby {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge,
+.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2/12;
@@ -241,30 +234,51 @@
   grid-row: 3/4;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--hobby .description__header--hobby,
-.main__content .main-section__wrapper .description__card--hobby .description__card--hobby .description__header--hobby {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list,
+.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 1em;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--hobby .hobby__list,
-.main__content .main-section__wrapper .description__card--hobby .description__card--hobby .hobby__list {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 6;
-  grid-column: 3/9;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container,
+.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container {
+  width: 5em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
+.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image:hover,
+.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-filter: drop-shadow(0px 0px 3px black);
+          filter: drop-shadow(0px 0px 3px black);
+}
+
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
+.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
+  width: 100%;
+  background: #671c3b;
+  color: white;
+  text-align: center;
 }
 
 .projects-examples {
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,8 +292,6 @@
   position: relative;
   width: 16em;
   height: 16em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 2em;
   -webkit-box-shadow: 0 0 20px #f0353c;
           box-shadow: 0 0 20px #f0353c;
@@ -302,8 +314,8 @@
 .projects-examples .project-example__card .project-example__description--hover:hover {
   background: #671c3b;
   opacity: 0.8;
-  -webkit-transition: .8s;
-  transition: .8s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .projects-examples .project-example__card .project__thumb {
@@ -389,6 +401,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -403,13 +417,22 @@ body {
 
 .main__content {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 2em 15% 2em 15%;
   background: url(../assets/retro_content_bg.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+}
+
+.span__bold {
+  font-weight: bold;
+}
+
+.internal-link {
+  text-decoration: underline;
+  color: #671c3b;
+  font-weight: bold;
+  font-style: italic;
 }
 
 @media (max-width: 2767.98px) {
@@ -419,8 +442,6 @@ body {
     position: fixed;
     top: -1000vw;
     opacity: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     list-style: none;
     width: inherit;
     display: -webkit-box;
@@ -542,8 +563,6 @@ body {
             justify-content: center;
   }
   .home-content__wrapper .home-text__wrapper {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     width: 100%;
     padding: 0 0 4em 0;
   }
@@ -581,10 +600,13 @@ body {
   .main__content .main-section__wrapper {
     padding-top: 3em;
   }
+  .main__content .main-section__wrapper .description-card__wrapper .description__card {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
   .main__content .main-section__wrapper .description-card__wrapper .description__tiger-image {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 4;
-    grid-column: 8/12;
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

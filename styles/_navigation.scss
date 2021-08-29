@@ -6,14 +6,10 @@
 .nav__wrapper {
   font-family: $navigationFont;
   position: relative;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   width: 100%;
   z-index: 9999;
   .navigation {
     position: fixed;
-    box-sizing: border-box;
     margin: 0;
     padding: 0.5em 0 0.5em 0;
     width: inherit;
