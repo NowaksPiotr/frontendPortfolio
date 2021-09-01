@@ -10,10 +10,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 }
 html,
 body {
-  font-family: "Bevan", cursive;
+  font-family: 'Red Hat Display', sans-serif;
   scroll-behavior: smooth;
 }
 body{
@@ -22,10 +23,7 @@ body{
 .main__content{
   position: relative;
   padding: 2em 15% 2em 15%;
-  background: url(../assets/retro_content_bg.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: $mainBodyColor;
 }
 .span__bold{
   font-weight: bold;
@@ -34,6 +32,6 @@ body{
   text-decoration: underline;
   color: $purpleMainColor;
   font-weight: bold;
-  font-style: italic
+  font-style: italic;
 }
 @import "./media";

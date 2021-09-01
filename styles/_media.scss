@@ -1,87 +1,87 @@
 @import "./variables";
 // NAVIGATION BAR ******************************************
-@media (max-width: 2767.98px) {
-  .navigation {
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: -$deviceWidth * 10;
-    opacity: 0;
-    list-style: none;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: $menuBackgroundColor;
-    transition: $transitionDurationHalfSec;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-  }
-  .navigation__item {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 0.5em 0 0.5em 0;
-    .navigation__link {
-      font-size: 1.2em;
+@media (max-width: 1023.98px) {
+  .nav__wrapper {
+    width: 100vw;
+    height: 0;
+    right: 0;
+    .navigation {
+      margin: 0;
+      padding: 0.5em;
+      position: fixed;
+      top: -$deviceWidth * 10;
       width: 100%;
-      color: $colorWhite;
-      padding: 0.5em 1em 0.5em 1em;
-      text-decoration: none;
-      text-align: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: $mainBodyColor;
+      transition: $transitionDurationHalfSec * 1.5;
+      .navigation__item {
+        width: 20vw;
+        height: 20vw;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .navigation__link {
+          font-size: 1em;
+          width: 100%;
+          color: $mainFontColor;
+          text-decoration: none;
+          text-align: center;
+        }
+      }
     }
-  }
-  .navigation--show {
-    top: 0;
-    transition: $transitionDurationHalfSec*2;
-    opacity: 1;
-  }
-  //  Hamburger menu button  //
-  .navigation__mobile-button {
-    position: fixed;
-    display: block;
-    cursor: pointer;
-    margin: 0;
-    top: 2em;
-    right: 2em;
-    border: none;
-    background: rgb(0, 0, 0);
-    width: $deviceWidth/17;
-    min-width: 10px;
-    max-width: 35px;
-    height: 3px;
-    transition: $transitionDurationHalfSec;
-    &::before,
-    &::after {
-      position: absolute;
-      left: 0;
-      content: "";
-      width: inherit;
-      min-width: inherit;
-      max-width: inherit;
-      height: inherit;
-      background: inherit;
+    .navigation--show {
+      top: 1em;
+      transition: $transitionDurationHalfSec * 1.5;
+      opacity: 1;
     }
-    &::before {
-      top: -6px;
+    //  Hamburger menu button
+    .navigation__mobile-button {
+      position: fixed;
+      display: block;
+      cursor: pointer;
+      margin: 0;
+      top: 2em;
+      right: 2em;
+      border: none;
+      background: rgb(0, 0, 0);
+      width: $deviceWidth/10;
+      min-width: 10px;
+      max-width: 35px;
+      height: 3px;
       transition: $transitionDurationHalfSec;
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        content: "";
+        width: inherit;
+        min-width: inherit;
+        max-width: inherit;
+        height: inherit;
+        background: inherit;
+      }
+      &::before {
+        top: -6px;
+        transition: $transitionDurationHalfSec;
+      }
+      &::after {
+        top: 6px;
+        transition: $transitionDurationHalfSec;
+      }
     }
-    &::after {
-      top: 6px;
+    .navigation__mobile-button--on {
+      transform: translateX($deviceWidth/44);
       transition: $transitionDurationHalfSec;
+      &::before,
+      &::after {
+        transform: translateX(-$deviceWidth/44);
+      }
     }
   }
-  .navigation__mobile-button--on {
-    transform: translateX($deviceWidth/44);
-    transition: $transitionDurationHalfSec;
-    background: $colorWhite;
-    &::before,
-    &::after {
-      transform: translateX(-$deviceWidth/44);
-    }
-  }
-  // Hamburger menu button end  //
+  // Hamburger menu button end
 }
 // NAVIGATION BAR ******************************************
 // WELCOME PAGE ********************************************
