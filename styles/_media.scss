@@ -34,7 +34,7 @@
   }
   .navigation--show {
     top: 0;
-    transition: $transitionDurationHalfSec;
+    transition: $transitionDurationHalfSec*2;
     opacity: 1;
   }
   //  Hamburger menu button  //
