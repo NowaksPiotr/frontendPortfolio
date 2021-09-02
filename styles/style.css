@@ -313,7 +313,7 @@
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
 .main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
   width: 100%;
-  background: #671c3b;
+  background: #f0353c;
   color: white;
   text-align: center;
 }
@@ -388,7 +388,7 @@
           box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
   font-family: "Red Hat Display", sans-serif;
   font-size: 1em;
-  text-shadow: 1px 1px 3px #b4213d;
+  text-shadow: 1px 1px 3px #f0353c;
   cursor: pointer;
 }
 
@@ -411,7 +411,17 @@
 }
 
 .section__contact {
+  position: relative;
   min-height: 60vh;
+  overflow: hidden;
+}
+
+.section__contact .plant__image {
+  position: absolute;
+  left: 80%;
+  bottom: -10%;
+  width: 20%;
+  max-width: 25%;
 }
 
 .footer {
@@ -435,7 +445,6 @@
   width: inherit;
   font-family: "Red Hat Display", sans-serif;
   font-size: 0.7em;
-  font-weight: bold;
   color: white;
   text-align: center;
 }

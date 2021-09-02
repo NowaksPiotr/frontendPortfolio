@@ -148,7 +148,7 @@
             }
             .figcaption {
               width: 100%;
-              background: $purpleMainColor;
+              background: $lighPinkMainColor;
               color: $colorWhite;
               text-align: center;
             }
@@ -212,7 +212,7 @@
         box-shadow: $outerShadow;
         font-family: $mainFont;
         font-size: 1em;
-        text-shadow: 1px 1px 3px $pinkMainColor;
+        text-shadow: 1px 1px 3px $lighPinkMainColor;
         cursor: pointer;
       }
     }
@@ -234,7 +234,16 @@
 }
 // CONTACT PAGE *****************************************
 .section__contact {
+  position: relative;
   min-height: 60vh;
+  overflow: hidden;
+  .plant__image {
+    position: absolute;
+    left: 80%;
+    bottom: -10%;
+    width: 20%;
+    max-width: 25%;
+  }
 }
 // CONTACT PAGE *****************************************
 
@@ -252,7 +261,6 @@
       width: inherit;
       font-family: $mainFont;
       font-size: 0.7em;
-      font-weight: bold;
       color: $colorWhite;
       text-align: center;
     }
