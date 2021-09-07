@@ -112,6 +112,10 @@
     .home-text__wrapper {
       width: 100%;
       padding: 0 0 4em 0;
+      .home-text__container {
+        border-left: none;
+        border-bottom: 3px solid $lighPinkMainColor;
+      }
     }
   }
 }
