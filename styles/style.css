@@ -428,8 +428,8 @@
 
 .section__contact .plant__image {
   position: absolute;
-  left: 80%;
-  bottom: -10%;
+  left: 75%;
+  bottom: -8%;
   width: 20%;
   max-width: 25%;
   -webkit-filter: drop-shadow(7px 7px 2px rgba(0, 0, 0, 0.6));
@@ -592,10 +592,16 @@ body {
     text-decoration: none;
     text-align: center;
   }
+  .nav__wrapper .navigation .navigation__item .navigation__link--active {
+    color: black;
+    text-decoration: line-through;
+    -webkit-transform-origin: 0.8s;
+            transform-origin: 0.8s;
+  }
   .nav__wrapper .navigation--show {
     top: 1em;
-    -webkit-transition: 1.2s;
-    transition: 1.2s;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
     opacity: 1;
   }
   .nav__wrapper .navigation__mobile-button {
@@ -693,6 +699,10 @@ body {
   .home-content__wrapper .portrait__wrapper .portrait__photo-bg {
     height: 20vw;
     width: 20vw;
+  }
+  .section__contact .plant__image {
+    left: 80%;
+    bottom: -18%;
   }
 }
 

@@ -30,11 +30,16 @@
           text-decoration: none;
           text-align: center;
         }
+        .navigation__link--active {
+          color:rgb(0, 0, 0);
+          text-decoration: line-through;
+          transform-origin: $transitionDurationHalfSec;
+        }
       }
     }
     .navigation--show {
       top: 1em;
-      transition: $transitionDurationHalfSec * 1.5;
+      transition: $transitionDurationHalfSec;
       opacity: 1;
     }
     //  Hamburger menu button
@@ -138,6 +143,12 @@
         height: 20vw;
         width: 20vw;
       }
+    }
+  }
+  .section__contact {
+    .plant__image {
+      left: 80%;
+      bottom: -18%;
     }
   }
 }
