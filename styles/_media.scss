@@ -31,7 +31,7 @@
           text-align: center;
         }
         .navigation__link--active {
-          color:rgb(0, 0, 0);
+          color: rgb(0, 0, 0);
           text-decoration: line-through;
           transform-origin: $transitionDurationHalfSec;
         }
@@ -99,6 +99,13 @@
       }
     }
   }
+  .section__contact {
+    .plant__image {
+      width: 30%;
+      left: 70%;
+      bottom: -4%;
+    }
+  }
 }
 @media (min-width: 501px) and (max-width: 1024px) {
   .home-content__wrapper {
@@ -125,9 +132,15 @@
   }
 }
 @media (min-width: 1440px) {
+  * {
+    font-size: 1.5rem;
+  }
   .home-content__wrapper {
     .home-text__wrapper {
-      font-size: 1.8em;
+      .title-main,
+      .title-name {
+        font-size: 1.8em;
+      }
     }
   }
 }

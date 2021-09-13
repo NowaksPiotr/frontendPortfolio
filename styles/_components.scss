@@ -1,10 +1,5 @@
 @import "./variables";
-// tymczasowe
-.project__thumb,
-.description__tiger-image {
-  width: 15%;
-  max-width: 250px;
-}
+
 // GENERAL *********************************************
 .main-section__wrapper {
   padding-top: 4.5em;
@@ -62,17 +57,23 @@
       max-height: 680px;
       width: 25vw;
       max-width: 680px;
-      background-color: $mainBodyColor;
-      box-shadow: $outerShadow;
-      border-radius: 50%;
+      background-color: transparent;
     }
     .portrait__photo {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
+      height: 80%;
+      transform: translateY(40%);
+      border-radius: 30px;
+      background: $mainBodyColor;
+      box-shadow: $innerShadow;
       .portrait__photo-image {
+        position: inherit;
+        transform: translateY(-42%);
         width: 100%;
+        border-radius: 30px;
       }
     }
   }
@@ -82,7 +83,7 @@
     justify-content: center;
     align-items: center;
     width: 49%;
-    animation: showUp 3.5s ease-in;
+    animation: showUp 2s ease-in;
     .home-text__container {
       text-align: center;
       border-left: 5px solid $lighPinkMainColor;
@@ -108,31 +109,23 @@
       position: relative;
       font-family: $mainFont;
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(12, minmax(1em, 1fr));
-      grid-template-rows: repeat(3, auto);
-      row-gap: 1em;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
       .description__header {
-        grid-column: 2/12;
-        grid-row: 1/2;
+        padding: 0 0 1rem 0;
         .header__text {
           font-weight: bold;
         }
       }
       .description__card {
-        grid-column: 2/8;
-        grid-row: 2/3;
-      }
-      .description__tiger-image {
-        grid-column: 9/12;
-        grid-row: 2/3;
-        width: 100%;
-        filter: drop-shadow(10px 15px 3px $lighPinkMainColor);
+        padding: 1rem;
       }
       .description__card--knowledge {
-        grid-column: 2/12;
-        grid-row: 3/4;
+        width: 100rem;
+        padding: 1rem;
         .knowledge__list {
           display: flex;
           flex-wrap: wrap;
@@ -140,7 +133,7 @@
           padding-top: 1em;
           .logo__container {
             width: 5em;
-            padding: 0 0.5em 0 0.5em;
+            padding: 0.5em;
             .logo__image {
               width: 100%;
               transition: $transitionDurationHalfSec;
@@ -239,14 +232,13 @@
 // CONTACT PAGE *****************************************
 .section__contact {
   position: relative;
-  min-height: 60vh;
+  min-height: 40vh;
   overflow: hidden;
   .plant__image {
     position: absolute;
     left: 75%;
     bottom: -8%;
     width: 20%;
-    max-width: 25%;
     filter: drop-shadow(7px 7px 2px $blackOp06);
 
   }
