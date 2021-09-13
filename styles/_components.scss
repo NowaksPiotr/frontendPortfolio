@@ -1,10 +1,5 @@
 @import "./variables";
-// tymczasowe
-.project__thumb,
-.description__tiger-image {
-  width: 15%;
-  max-width: 250px;
-}
+
 // GENERAL *********************************************
 .main-section__wrapper {
   padding-top: 4.5em;
@@ -12,8 +7,8 @@
   min-height: 100vh;
   width: 100%;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 40px rgb(255, 255, 255);
+  background: $mainBodyColor;
+  box-shadow: $innerShadow;
   &.main-section__wrapper:last-child {
     margin: 0;
   }
@@ -25,12 +20,18 @@
   position: relative;
   top: 0;
   left: 0;
-  z-index: -9999;
   height: $deviceHeight;
   width: 100%;
   .background__picture {
     height: inherit;
+    position: fixed;
     width: 100%;
+    top: -20%;
+    left: -18%;
+    opacity: 0.2;
+    transform: rotate(15deg);
+    transform-origin: 0;
+    animation: wobble 15s infinite;
   }
   picture {
     height: inherit;
@@ -38,12 +39,13 @@
 }
 .home-content__wrapper {
   position: absolute;
+  height: $deviceHeight;
+  width: 100%;
   top: 0;
   left: 0;
   display: flex;
-  justify-content: space-around;
-  height: $deviceHeight;
-  width: 100%;
+  justify-content: center;
+
   .portrait__wrapper {
     position: relative;
     display: flex;
@@ -55,17 +57,23 @@
       max-height: 680px;
       width: 25vw;
       max-width: 680px;
-      background-color: $colorWhite;
-      box-shadow: 0px -10px 20px rgb(177, 177, 177);
-      border-radius: 50%;
+      background-color: transparent;
     }
     .portrait__photo {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
+      height: 80%;
+      transform: translateY(40%);
+      border-radius: 30px;
+      background: $mainBodyColor;
+      box-shadow: $innerShadow;
       .portrait__photo-image {
+        position: inherit;
+        transform: translateY(-42%);
         width: 100%;
+        border-radius: 30px;
       }
     }
   }
@@ -75,8 +83,11 @@
     justify-content: center;
     align-items: center;
     width: 49%;
+    animation: showUp 2s ease-in;
     .home-text__container {
       text-align: center;
+      border-left: 5px solid $lighPinkMainColor;
+      padding: 0 0 0 0.5em;
     }
   }
 }
@@ -85,6 +96,7 @@
 // ABOUT-ME PAGE****************************************
 .main__content {
   .main-section__wrapper {
+    border-left: 4px solid $lighPinkMainColor;
     .main-section__title {
       width: 100%;
       padding: 1em 0 1em 1em;
@@ -95,33 +107,25 @@
     .description-card__wrapper,
     .description__card--hobby {
       position: relative;
-      font-family: $regularTextFont;
+      font-family: $mainFont;
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(12, minmax(1em, 1fr));
-      grid-template-rows: repeat(3, auto);
-      row-gap: 1em;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
       .description__header {
-        grid-column: 2/12;
-        grid-row: 1/2;
+        padding: 0 0 1rem 0;
         .header__text {
           font-weight: bold;
         }
       }
       .description__card {
-        grid-column: 2/8;
-        grid-row: 2/3;
-      }
-      .description__tiger-image {
-        grid-column: 9/12;
-        grid-row: 2/3;
-        width: 100%;
-        filter: drop-shadow(10px 15px 3px $lighPinkMainColor);
+        padding: 1rem;
       }
       .description__card--knowledge {
-        grid-column: 2/12;
-        grid-row: 3/4;
+        width: 100rem;
+        padding: 1rem;
         .knowledge__list {
           display: flex;
           flex-wrap: wrap;
@@ -129,19 +133,19 @@
           padding-top: 1em;
           .logo__container {
             width: 5em;
-            padding: 0 0.5em 0 0.5em;
+            padding: 0.5em;
             .logo__image {
               width: 100%;
               transition: $transitionDurationHalfSec;
               &:hover {
                 transform: scale(1.2);
                 transition: $transitionDurationHalfSec;
-                filter: drop-shadow(0px 0px 3px rgb(0,0,0));
+                filter: drop-shadow(0px 0px 3px rgb(0, 0, 0));
               }
             }
             .figcaption {
               width: 100%;
-              background: $purpleMainColor;
+              background: $lighPinkMainColor;
               color: $colorWhite;
               text-align: center;
             }
@@ -164,7 +168,9 @@
     width: 16em;
     height: 16em;
     border-radius: 2em;
-    box-shadow: 0 0 20px $lighPinkMainColor;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2),
+      -6px -6px 15px 0 rgba(255, 255, 255, 0.5),
+      10px 10px 10px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 1em;
     .project-example__description--hover {
@@ -200,10 +206,10 @@
         height: 3em;
         opacity: 1;
         border: none;
-        background: $yellowMainColor;
-        font-family: $mainBigHeadersFont;
+        box-shadow: $outerShadow;
+        font-family: $mainFont;
         font-size: 1em;
-        text-shadow: 1px 1px 1px $pinkMainColor;
+        text-shadow: 1px 1px 3px $lighPinkMainColor;
         cursor: pointer;
       }
     }
@@ -219,13 +225,23 @@
   .card {
     width: 75%;
     .card__text {
-      font-family: $regularTextFont;
+      font-family: $mainFont;
     }
   }
 }
 // CONTACT PAGE *****************************************
 .section__contact {
-  min-height: 60vh;
+  position: relative;
+  min-height: 40vh;
+  overflow: hidden;
+  .plant__image {
+    position: absolute;
+    left: 75%;
+    bottom: -8%;
+    width: 20%;
+    filter: drop-shadow(7px 7px 2px $blackOp06);
+
+  }
 }
 // CONTACT PAGE *****************************************
 
@@ -241,12 +257,29 @@
     width: 100%;
     .footer__text {
       width: inherit;
-      font-family: $regularTextFont;
+      font-family: $mainFont;
       font-size: 0.7em;
-      font-weight: bold;
       color: $colorWhite;
       text-align: center;
     }
   }
 }
 // FOOTER ***********************************************
+
+// ANIMATIONS *******************************************
+@keyframes wobble {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes showUp {
+  from { opacity: 0};
+  to { opacity: 1};
+}
