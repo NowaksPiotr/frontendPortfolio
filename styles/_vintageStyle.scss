@@ -1,37 +1,54 @@
 @import "./variables";
 
+/* ============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================================================*/
+
 // GENERAL *********************************************
 .main-section__wrapper {
   padding-top: 4.5em;
   margin: 0 0 4em 0;
   min-height: 100vh;
   width: 100%;
-  border-radius: 50px;
-  background: $mainBodyColor;
-  box-shadow: $innerShadow;
+  border-top: .2em solid $lighPinkMainColor;
+  border-right: .2em solid $lighPinkMainColor;
+  background: transparent;
   &.main-section__wrapper:last-child {
     margin: 0;
   }
 }
 // GENERAL *********************************************
-
 // WELCOMING PAGE***************************************
 .background__wrapper {
   position: relative;
   top: 0;
   left: 0;
+  z-index: -9999;
   height: $deviceHeight;
   width: 100%;
+  background: linear-gradient(
+    $mainBodyColor 0 50vh,
+    $yellowMainColor 0 60vh,
+    $orangeMainColor 0 70vh,
+    $lighPinkMainColor 0 80vh,
+    $pinkMainColor 0 90vh,
+    $purpleMainColor 0 100vh
+  );
   .background__picture {
     height: inherit;
-    position: fixed;
     width: 100%;
-    top: -20%;
-    left: -18%;
-    opacity: 0.2;
-    transform: rotate(15deg);
-    transform-origin: 0;
-    animation: wobble 15s infinite;
   }
   picture {
     height: inherit;
@@ -39,13 +56,12 @@
 }
 .home-content__wrapper {
   position: absolute;
-  height: $deviceHeight;
-  width: 100%;
   top: 0;
   left: 0;
   display: flex;
-  justify-content: center;
-
+  justify-content: space-around;
+  height: $deviceHeight;
+  width: 100%;
   .portrait__wrapper {
     position: relative;
     display: flex;
@@ -57,23 +73,19 @@
       max-height: 680px;
       width: 25vw;
       max-width: 680px;
-      background-color: transparent;
+      background-color: $colorWhite;
+      box-shadow: 0px -10px 20px rgb(177, 177, 177);
+      border-radius: 50%;
+      overflow: hidden;
     }
     .portrait__photo {
-      position: relative;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 80%;
-      transform: translateY(40%);
-      border-radius: 30px;
-      background: $mainBodyColor;
-      box-shadow: $innerShadow;
       .portrait__photo-image {
-        position: inherit;
-        transform: translateY(-42%);
-        width: 100%;
-        border-radius: 30px;
+        width: 75%;
+        transform: translateX(10%);
       }
     }
   }
@@ -83,31 +95,28 @@
     justify-content: center;
     align-items: center;
     width: 49%;
-    animation: showUp 2s ease-in;
     .home-text__container {
       text-align: center;
-      border-left: 5px solid $lighPinkMainColor;
-      padding: 0 0 0 0.5em;
     }
   }
 }
 // WELCOMING PAGE***************************************
-
 // ABOUT-ME PAGE****************************************
 .main__content {
   .main-section__wrapper {
-    border-left: 4px solid $lighPinkMainColor;
+      transform: skew(8deg);
     .main-section__title {
       width: 100%;
       padding: 1em 0 1em 1em;
+      transform: skew(-8deg);
       .header__main {
         padding-left: 0.5em;
       }
     }
     .description-card__wrapper,
     .description__card--hobby {
+      transform: skew(-8deg);
       position: relative;
-      font-family: $mainFont;
       width: 100%;
       padding: 1em;
       display: flex;
@@ -156,10 +165,10 @@
   }
 }
 // ABOUT-ME PAGE ****************************************
-
 // PROJECTS PAGE ****************************************
 .projects-examples {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -167,10 +176,9 @@
     position: relative;
     width: 16em;
     height: 16em;
+    box-sizing: border-box;
     border-radius: 2em;
-    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2),
-      -6px -6px 15px 0 rgba(255, 255, 255, 0.5),
-      10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px $lighPinkMainColor;
     overflow: hidden;
     margin: 1em;
     .project-example__description--hover {
@@ -206,80 +214,47 @@
         height: 3em;
         opacity: 1;
         border: none;
-        box-shadow: $outerShadow;
-        font-family: $mainFont;
+        background: $yellowMainColor;
+        font-family: $mainBigHeadersFont;
         font-size: 1em;
-        text-shadow: 1px 1px 3px $lighPinkMainColor;
+        text-shadow: 1px 1px 1px $pinkMainColor;
         cursor: pointer;
       }
     }
   }
-}
-// PROJECTS PAGE ****************************************
-
-// CONTACT PAGE *****************************************
-.description__card--contact {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  .card {
-    width: 75%;
-    .card__text {
-      font-family: $mainFont;
-    }
-  }
-}
-// CONTACT PAGE *****************************************
-.section__contact {
-  position: relative;
-  min-height: 40vh;
-  overflow: hidden;
-  .plant__image {
-    position: absolute;
-    left: 75%;
-    bottom: -8%;
-    width: 20%;
-    filter: drop-shadow(7px 7px 2px $blackOp06);
-
-  }
-}
-// CONTACT PAGE *****************************************
-
-// FOOTER ***********************************************
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: $menuBackgroundColor;
-  .footer__wrapper {
+  // PROJECTS PAGE ****************************************
+  // CONTACT PAGE *****************************************
+  .description__card--contact {
     width: 100%;
-    .footer__text {
-      width: inherit;
-      font-family: $mainFont;
-      font-size: 0.7em;
-      color: $colorWhite;
-      text-align: center;
+    display: flex;
+    justify-content: center;
+    .card {
+      width: 75%;
+      .card__text {
+        font-family: $regularTextFont;
+      }
     }
   }
-}
-// FOOTER ***********************************************
-
-// ANIMATIONS *******************************************
-@keyframes wobble {
-  0% {
-    transform: rotate(15deg);
+  // CONTACT PAGE *****************************************
+  // CONTACT PAGE *****************************************
+  // FOOTER ***********************************************
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $menuBackgroundColor;
+    .footer__wrapper {
+      width: 100%;
+      .footer__text {
+        width: inherit;
+        font-family: $regularTextFont;
+        font-size: 0.7em;
+        font-weight: bold;
+        color: $colorWhite;
+        text-align: center;
+      }
+    }
   }
-  50% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-
-@keyframes showUp {
-  from { opacity: 0};
-  to { opacity: 1};
 }

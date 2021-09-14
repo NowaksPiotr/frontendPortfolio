@@ -1,7 +1,8 @@
 @import "./variables";
 @import "./navigation";
 // @import "./homepage";
-@import "./components";
+@import "./vintageStyle";
+// @import "./components";
 
 // font-family: 'Zilla Slab', serif;
 // Zdjęcie autorstwa Olga Lioncat z Pexels
@@ -21,11 +22,16 @@ body{
 }
 .main__content{
   position: relative;
+  top: 0;
+  left: 0;
   padding: 2em 15% 2em 15%;
-  background: url(../assets/retro_content_bg.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(45deg,
+  $mainBodyColor 0 5vw,
+  $pinkMainColor 5vw 15vw,
+  $lighPinkMainColor 5vw 25vw,
+  $orangeMainColor 5vw 35vw,
+  $yellowMainColor 5vw 45vw,
+  $mainBodyColor 0 100%);
 }
 .span__bold{
   font-weight: bold;
@@ -35,5 +41,10 @@ body{
   color: $purpleMainColor;
   font-weight: bold;
   font-style: italic
+}
+.footer{
+  background: $menuBackgroundColor;
+  text-align: center;
+  color: $colorWhite;
 }
 @import "./media";
