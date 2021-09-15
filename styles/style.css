@@ -87,11 +87,42 @@
           transform-origin: 0.5s;
 }
 
+/*=========================================
+-----------TABLE OF CONTENT----------------
+
+1. Global styles
+
+2. Typography
+
+3. Components 
+
+
+=========================================*/
+.main-section__wrapper,
+.background__wrapper,
+.background__picture,
+.home-content__wrapper,
+.portrait__photo,
+.portrait__photo-image,
+.main-section__title,
+.description-card__wrapper,
+.description__card--hobby,
+.logo__image,
+.figcaption,
+.projects-examples,
+.project-example__description--hover,
+.project__thumb,
+.project-description__buttons--wrapper,
+.description__card--contact,
+.footer,
+.footer__wrapper {
+  width: 100%;
+}
+
 .main-section__wrapper {
   padding-top: 4.5em;
   margin: 0 0 4em 0;
   min-height: 100vh;
-  width: 100%;
   border-radius: 50px;
   background: #f9f9f9;
   -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
@@ -107,13 +138,11 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100%;
 }
 
 .background__wrapper .background__picture {
   height: inherit;
   position: fixed;
-  width: 100%;
   top: -20%;
   left: -18%;
   opacity: 0.2;
@@ -132,7 +161,6 @@
 .home-content__wrapper {
   position: absolute;
   height: 100vh;
-  width: 100%;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -169,21 +197,17 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
   height: 80%;
   -webkit-transform: translateY(40%);
           transform: translateY(40%);
   border-radius: 30px;
   background: #f9f9f9;
-  -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
-          box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
 }
 
 .home-content__wrapper .portrait__wrapper .portrait__photo .portrait__photo-image {
   position: inherit;
   -webkit-transform: translateY(-42%);
           transform: translateY(-42%);
-  width: 100%;
   border-radius: 30px;
 }
 
@@ -214,7 +238,6 @@
 }
 
 .main__content .main-section__wrapper .main-section__title {
-  width: 100%;
   padding: 1em 0 1em 1em;
 }
 
@@ -226,7 +249,6 @@
 .main__content .main-section__wrapper .description__card--hobby {
   position: relative;
   font-family: "Red Hat Display", sans-serif;
-  width: 100%;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,7 +304,6 @@
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
 .main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image {
-  width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -299,14 +320,12 @@
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
 .main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
-  width: 100%;
   background: #f0353c;
   color: white;
   text-align: center;
 }
 
 .projects-examples {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,7 +350,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
   color: white;
   opacity: 0;
@@ -350,12 +368,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: -1;
 }
 
 .projects-examples .project-example__card .project-description__buttons--wrapper {
-  width: 100%;
   position: absolute;
   bottom: 0;
   display: -webkit-box;
@@ -380,7 +396,6 @@
 }
 
 .description__card--contact {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,7 +430,6 @@
 .footer {
   position: relative;
   bottom: 0;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,10 +437,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: #636363;
-}
-
-.footer .footer__wrapper {
-  width: 100%;
 }
 
 .footer .footer__wrapper .footer__text {
