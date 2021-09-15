@@ -119,15 +119,30 @@
   width: 100%;
 }
 
+.description__text {
+  line-height: 2rem;
+}
+
+.internal-link {
+  font-style: italic;
+  color: #f0353c;
+  text-decoration: none;
+}
+
+.span__bold {
+  font-weight: bold;
+}
+
 .main-section__wrapper {
   min-height: 100vh;
   margin: 0 0 5rem 0;
   padding-top: 4.5rem;
-  background: #f9f9f9;
+  background: rgba(249, 249, 249, 0.5);
   border-radius: 30px;
-  border-left: 4px solid #f0353c;
+  border-left: 3px solid #f0353c;
   -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
           box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
 }
 
 .main-section__wrapper.main-section__wrapper:last-child {
@@ -135,11 +150,7 @@
 }
 
 .main-section__wrapper .main-section__title {
-  padding: 1rem 0 1rem 1rem;
-}
-
-.main-section__wrapper .main-section__title .header__main {
-  padding-left: 0.5rem;
+  padding: 1rem 0 1rem 2rem;
 }
 
 .background__wrapper {
@@ -246,18 +257,16 @@
 .description__card--hobby {
   position: relative;
   font-family: "Red Hat Display", sans-serif;
-  padding: 1rem;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .description-card__wrapper .description__header,
@@ -275,14 +284,14 @@
   padding: 1rem;
 }
 
-.description-card__wrapper .description__card--knowledge,
-.description__card--hobby .description__card--knowledge {
+.description-card__wrapper .description__card--flex,
+.description__card--hobby .description__card--flex {
   width: 100rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
-.description-card__wrapper .description__card--knowledge .knowledge__list,
-.description__card--hobby .description__card--knowledge .knowledge__list {
+.description-card__wrapper .description__card--flex .knowledge__list,
+.description__card--hobby .description__card--flex .knowledge__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,20 +302,20 @@
   padding-top: 1rem;
 }
 
-.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container,
-.description__card--hobby .description__card--knowledge .knowledge__list .logo__container {
+.description-card__wrapper .description__card--flex .knowledge__list .logo__container,
+.description__card--hobby .description__card--flex .knowledge__list .logo__container {
   width: 5rem;
   padding: 0.5rem;
 }
 
-.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
-.description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image {
+.description-card__wrapper .description__card--flex .knowledge__list .logo__container .logo__image,
+.description__card--hobby .description__card--flex .knowledge__list .logo__container .logo__image {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image:hover,
-.description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image:hover {
+.description-card__wrapper .description__card--flex .knowledge__list .logo__container .logo__image:hover,
+.description__card--hobby .description__card--flex .knowledge__list .logo__container .logo__image:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 0.5s;
@@ -315,11 +324,12 @@
           filter: drop-shadow(0px 0px 3px black);
 }
 
-.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
-.description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
+.description-card__wrapper .description__card--flex .knowledge__list .logo__container .figcaption,
+.description__card--hobby .description__card--flex .knowledge__list .logo__container .figcaption {
   background: #f0353c;
   color: white;
   text-align: center;
+  font-weight: bold;
 }
 
 .projects-examples {
@@ -399,6 +409,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .description__card--contact .card {
@@ -409,17 +420,16 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
-.section__contact {
-  position: relative;
+.main-section__wrapper--contact {
   min-height: 40vh;
-  overflow: hidden;
 }
 
-.section__contact .plant__image {
-  position: absolute;
-  left: 75%;
-  bottom: -8%;
-  width: 20%;
+.main-section__wrapper--contact .plant__image {
+  position: relative;
+  width: 15%;
+  left: 80%;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
   -webkit-filter: drop-shadow(7px 7px 2px rgba(0, 0, 0, 0.6));
           filter: drop-shadow(7px 7px 2px rgba(0, 0, 0, 0.6));
 }
@@ -513,18 +523,11 @@ body {
 .main__content {
   position: relative;
   padding: 2em 15% 2em 15%;
-  background: #f9f9f9;
+  background-image: linear-gradient(-120deg, #f9f9f9 0 40%, #bfffbf 40% 60%, #f9f9f9 40% 100%);
 }
 
 .span__bold {
   font-weight: bold;
-}
-
-.internal-link {
-  text-decoration: underline;
-  color: #671c3b;
-  font-weight: bold;
-  font-style: italic;
 }
 
 @media (max-width: 1023.98px) {
@@ -720,13 +723,9 @@ body {
   .main__content .main-section__wrapper {
     padding-top: 3em;
   }
-  .main__content .main-section__wrapper .description-card__wrapper .description__card {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 10;
-    grid-column: 2/12;
-  }
-  .main__content .main-section__wrapper .description-card__wrapper .description__tiger-image {
-    display: none;
+  .main__content .main-section__wrapper .description-card__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=style.css.map */

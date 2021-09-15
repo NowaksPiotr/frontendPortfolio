@@ -23,15 +23,11 @@ body{
 .main__content{
   position: relative;
   padding: 2em 15% 2em 15%;
-  background: $mainBodyColor;
+  // background: $mainBodyColor;
+  background-image: linear-gradient(-120deg, $mainBodyColor 0 40%, rgb(191, 255, 191) 40% 60%, $mainBodyColor 40% 100%);
 }
 .span__bold{
   font-weight: bold;
 }
-.internal-link{
-  text-decoration: underline;
-  color: $purpleMainColor;
-  font-weight: bold;
-  font-style: italic;
-}
+
 @import "./media";

@@ -199,12 +199,7 @@
     .main-section__wrapper {
       padding-top: 3em;
       .description-card__wrapper {
-        .description__card {
-          grid-column: 2/12;
-        }
-        .description__tiger-image {
-          display: none;
-        }
+        flex-wrap: wrap;
       }
     }
   }

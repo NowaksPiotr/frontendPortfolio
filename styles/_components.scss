@@ -35,25 +35,34 @@
 }
 
 // 2. Typography
-
+.description__text{
+  line-height: 2rem;
+}
+.internal-link{
+  font-style: italic;
+  color: $lighPinkMainColor;
+  text-decoration: none;
+}
+.span__bold{
+  font-weight: bold;
+}
 // 3. Components
 
 .main-section__wrapper {
   min-height: 100vh;
   margin: 0 0 5rem 0;
   padding-top: 4.5rem;
-  background: $mainBodyColor;
+  // background: $mainBodyColor;
+  background: rgba(249, 249, 249, .5);
   border-radius: 30px;
-  border-left: 4px solid $lighPinkMainColor;
+  border-left: 3px solid $lighPinkMainColor;
   box-shadow: $innerShadow;
+  overflow: hidden;
   &.main-section__wrapper:last-child {
     margin: 0;
   }
   .main-section__title {
-    padding: 1rem 0 1rem 1rem;
-    .header__main {
-      padding-left: 0.5rem;
-    }
+    padding: 1rem 0 1rem 2rem;
   }
 }
 // GENERAL *********************************************
@@ -137,11 +146,11 @@
 .description__card--hobby {
   position: relative;
   font-family: $mainFont;
-  padding: 1rem;
+  padding: 0 2rem;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   .description__header {
     padding: 0 0 1rem 0;
     .header__text {
@@ -151,9 +160,9 @@
   .description__card {
     padding: 1rem;
   }
-  .description__card--knowledge {
+  .description__card--flex {
     width: 100rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     .knowledge__list {
       display: flex;
       flex-wrap: wrap;
@@ -174,6 +183,7 @@
           background: $lighPinkMainColor;
           color: $colorWhite;
           text-align: center;
+          font-weight: bold;
         }
       }
     }
@@ -241,6 +251,7 @@
 .description__card--contact {
   display: flex;
   justify-content: center;
+  overflow: hidden;
   .card {
     width: 75%;
     .card__text {
@@ -248,15 +259,13 @@
     }
   }
 }
-.section__contact {
-  position: relative;
+.main-section__wrapper--contact {
   min-height: 40vh;
-  overflow: hidden;
   .plant__image {
-    position: absolute;
-    left: 75%;
-    bottom: -8%;
-    width: 20%;
+    position: relative;
+    width: 15%;
+    left: 80%;
+    transform: translateY(20%);
     filter: drop-shadow(7px 7px 2px $blackOp06);
   }
 }
