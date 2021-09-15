@@ -8,7 +8,7 @@
   width: 100%;
   border-radius: 50px;
   background: $mainBodyColor;
-  box-shadow: $innerShadow;
+  // box-shadow: $innerShadow;
   &.main-section__wrapper:last-child {
     margin: 0;
   }
@@ -68,7 +68,7 @@
       transform: translateY(40%);
       border-radius: 30px;
       background: $mainBodyColor;
-      box-shadow: $innerShadow;
+      // box-shadow: $innerShadow;
       .portrait__photo-image {
         position: inherit;
         transform: translateY(-42%);
@@ -107,25 +107,25 @@
     .description-card__wrapper,
     .description__card--hobby {
       position: relative;
-      font-family: $mainFont;
+      // font-family: $mainFont;
       width: 100%;
-      padding: 1em;
+      padding: 1rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       .description__header {
-        padding: 0 0 1em 0;
+        padding: 0 0 1rem 0;
         .header__text {
           font-weight: bold;
         }
       }
       .description__card {
-        padding: 1em;
+        padding: 1rem;
       }
       .description__card--knowledge {
-        width: 100em;
-        padding: 1em;
+        width: 100rem;
+        padding: 1rem;
         .knowledge__list {
           display: flex;
           flex-wrap: wrap;
@@ -206,8 +206,8 @@
         height: 3em;
         opacity: 1;
         border: none;
-        box-shadow: $outerShadow;
-        font-family: $mainFont;
+        // box-shadow: $outerShadow;
+        // font-family: $mainFont;
         font-size: 1em;
         text-shadow: 1px 1px 3px $lighPinkMainColor;
         cursor: pointer;
@@ -225,7 +225,7 @@
   .card {
     width: 75%;
     .card__text {
-      font-family: $mainFont;
+      // font-family: $mainFont;
     }
   }
 }
@@ -239,7 +239,7 @@
     left: 75%;
     bottom: -8%;
     width: 20%;
-    filter: drop-shadow(7px 7px 2px $blackOp06);
+    // filter: drop-shadow(7px 7px 2px $blackOp06);
 
   }
 }
@@ -257,7 +257,7 @@
     width: 100%;
     .footer__text {
       width: inherit;
-      font-family: $mainFont;
+      // font-family: $mainFont;
       font-size: 0.7em;
       color: $colorWhite;
       text-align: center;
