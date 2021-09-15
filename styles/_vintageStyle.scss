@@ -104,18 +104,15 @@
 // ABOUT-ME PAGE****************************************
 .main__content {
   .main-section__wrapper {
-      transform: skew(8deg);
     .main-section__title {
       width: 100%;
       padding: 1em 0 1em 1em;
-      transform: skew(-8deg);
       .header__main {
         padding-left: 0.5em;
       }
     }
     .description-card__wrapper,
     .description__card--hobby {
-      transform: skew(-8deg);
       position: relative;
       width: 100%;
       padding: 1em;
