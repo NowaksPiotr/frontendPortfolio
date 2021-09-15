@@ -6,7 +6,7 @@
 .nav__wrapper {
   font-family: $mainFont;
   position: fixed;
-  right: 1em;
+  right: 1rem;
   width: 10vw;
   height: 100vh;
   display: flex;
@@ -15,7 +15,7 @@
   z-index: 9999;
   .navigation {
     position: relative;
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.5rem 0 0.5rem 0;
     width: inherit;
     list-style: none;
     display: flex;
@@ -27,7 +27,7 @@
     box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4),
       inset -3px -3px 10px rgba(255, 255, 255, 0.3);
     .navigation__item {
-      margin: 0.5em;
+      margin: 0.5rem;
       background: $navButtonsColor;
       box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2),
         -6px -6px 15px 0 rgba(255, 255, 255, 0.5),
@@ -39,7 +39,7 @@
       height: 8vw;
       border-radius: 50%;
       .navigation__link {
-        font-size: 1em;
+        font-size: 1rem;
         text-align: center;
         text-shadow: 1px 1px 3px $lighPinkMainColor;
         color: $mainFontColor;

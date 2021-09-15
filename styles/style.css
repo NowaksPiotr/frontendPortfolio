@@ -5,7 +5,7 @@
 .nav__wrapper {
   font-family: "Red Hat Display", sans-serif;
   position: fixed;
-  right: 1em;
+  right: 1rem;
   width: 10vw;
   height: 100vh;
   display: -webkit-box;
@@ -22,7 +22,7 @@
 
 .nav__wrapper .navigation {
   position: relative;
-  padding: 0.5em 0 0.5em 0;
+  padding: 0.5rem 0 0.5rem 0;
   width: inherit;
   list-style: none;
   display: -webkit-box;
@@ -45,7 +45,7 @@
 }
 
 .nav__wrapper .navigation .navigation__item {
-  margin: 0.5em;
+  margin: 0.5rem;
   background: #efefef;
   -webkit-box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
@@ -64,7 +64,7 @@
 }
 
 .nav__wrapper .navigation .navigation__item .navigation__link {
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
   text-shadow: 1px 1px 3px #f0353c;
   color: #636363;
@@ -120,17 +120,26 @@
 }
 
 .main-section__wrapper {
-  padding-top: 4.5em;
-  margin: 0 0 4em 0;
   min-height: 100vh;
-  border-radius: 50px;
+  margin: 0 0 5rem 0;
+  padding-top: 4.5rem;
   background: #f9f9f9;
+  border-radius: 30px;
+  border-left: 4px solid #f0353c;
   -webkit-box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
           box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.3);
 }
 
 .main-section__wrapper.main-section__wrapper:last-child {
   margin: 0;
+}
+
+.main-section__wrapper .main-section__title {
+  padding: 1rem 0 1rem 1rem;
+}
+
+.main-section__wrapper .main-section__title .header__main {
+  padding-left: 0.5rem;
 }
 
 .background__wrapper {
@@ -230,23 +239,11 @@
 .home-content__wrapper .home-text__wrapper .home-text__container {
   text-align: center;
   border-left: 5px solid #f0353c;
-  padding: 0 0 0 0.5em;
+  padding: 0 0 0 0.5rem;
 }
 
-.main__content .main-section__wrapper {
-  border-left: 4px solid #f0353c;
-}
-
-.main__content .main-section__wrapper .main-section__title {
-  padding: 1em 0 1em 1em;
-}
-
-.main__content .main-section__wrapper .main-section__title .header__main {
-  padding-left: 0.5em;
-}
-
-.main__content .main-section__wrapper .description-card__wrapper,
-.main__content .main-section__wrapper .description__card--hobby {
+.description-card__wrapper,
+.description__card--hobby {
   position: relative;
   font-family: "Red Hat Display", sans-serif;
   padding: 1rem;
@@ -263,29 +260,29 @@
           align-items: center;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__header,
-.main__content .main-section__wrapper .description__card--hobby .description__header {
+.description-card__wrapper .description__header,
+.description__card--hobby .description__header {
   padding: 0 0 1rem 0;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__header .header__text,
-.main__content .main-section__wrapper .description__card--hobby .description__header .header__text {
+.description-card__wrapper .description__header .header__text,
+.description__card--hobby .description__header .header__text {
   font-weight: bold;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card,
-.main__content .main-section__wrapper .description__card--hobby .description__card {
+.description-card__wrapper .description__card,
+.description__card--hobby .description__card {
   padding: 1rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge {
+.description-card__wrapper .description__card--knowledge,
+.description__card--hobby .description__card--knowledge {
   width: 100rem;
   padding: 1rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list {
+.description-card__wrapper .description__card--knowledge .knowledge__list,
+.description__card--hobby .description__card--knowledge .knowledge__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,23 +290,23 @@
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container {
-  width: 5em;
-  padding: 0.5em;
+.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container,
+.description__card--hobby .description__card--knowledge .knowledge__list .logo__container {
+  width: 5rem;
+  padding: 0.5rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image {
+.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
+.description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image:hover,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image:hover {
+.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image:hover,
+.description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 0.5s;
@@ -318,8 +315,8 @@
           filter: drop-shadow(0px 0px 3px black);
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
+.description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
+.description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
   background: #f0353c;
   color: white;
   text-align: center;
@@ -337,9 +334,9 @@
 
 .projects-examples .project-example__card {
   position: relative;
-  width: 16em;
-  height: 16em;
-  border-radius: 2em;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 2rem;
   -webkit-box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -384,7 +381,7 @@
 
 .projects-examples .project-example__card .project-description__buttons--wrapper .project-description__button {
   width: 49%;
-  height: 3em;
+  height: 3rem;
   opacity: 1;
   border: none;
   -webkit-box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
@@ -442,7 +439,7 @@
 .footer .footer__wrapper .footer__text {
   width: inherit;
   font-family: "Red Hat Display", sans-serif;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   color: white;
   text-align: center;
 }
