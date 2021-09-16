@@ -2,8 +2,8 @@
 
 // GENERAL *********************************************
 .main-section__wrapper {
-  padding-top: 4.5em;
-  margin: 0 0 4em 0;
+  padding-top: 4.5rem;
+  margin: 0 0 4rem 0;
   min-height: 100vh;
   width: 100%;
   border-radius: 50px;
@@ -87,7 +87,7 @@
     .home-text__container {
       text-align: center;
       border-left: 5px solid $lighPinkMainColor;
-      padding: 0 0 0 0.5em;
+      padding: 0 0 0 0.5rem;
     }
   }
 }
@@ -99,9 +99,9 @@
     border-left: 4px solid $lighPinkMainColor;
     .main-section__title {
       width: 100%;
-      padding: 1em 0 1em 1em;
+      padding: 1rem 0 1rem 1rem;
       .header__main {
-        padding-left: 0.5em;
+        padding-left: 0.5rem;
       }
     }
     .description-card__wrapper,
@@ -130,10 +130,10 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
-          padding-top: 1em;
+          padding-top: 1rem;
           .logo__container {
-            width: 5em;
-            padding: 0.5em;
+            width: 5rem;
+            padding: 0.5rem;
             .logo__image {
               width: 100%;
               transition: $transitionDurationHalfSec;
@@ -165,14 +165,14 @@
   flex-wrap: wrap;
   .project-example__card {
     position: relative;
-    width: 16em;
-    height: 16em;
-    border-radius: 2em;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 2rem;
     box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2),
       -6px -6px 15px 0 rgba(255, 255, 255, 0.5),
       10px 10px 10px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 1em;
+    margin: 1rem;
     .project-example__description--hover {
       position: absolute;
       top: 0;
@@ -203,12 +203,12 @@
       justify-content: space-between;
       .project-description__button {
         width: 49%;
-        height: 3em;
+        height: 3rem;
         opacity: 1;
         border: none;
         // box-shadow: $outerShadow;
         // font-family: $mainFont;
-        font-size: 1em;
+        font-size: 1rem;
         text-shadow: 1px 1px 3px $lighPinkMainColor;
         cursor: pointer;
       }
@@ -258,7 +258,7 @@
     .footer__text {
       width: inherit;
       // font-family: $mainFont;
-      font-size: 0.7em;
+      font-size: 0.7rem;
       color: $colorWhite;
       text-align: center;
     }

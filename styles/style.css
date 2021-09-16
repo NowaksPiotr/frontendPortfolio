@@ -156,12 +156,13 @@
 
 ===================================================*/
 .main-section__wrapper {
-  padding-top: 4.5em;
-  margin: 0 0 4em 0;
+  padding-top: 4.5rem;
+  margin: 0 0 4rem 0;
   min-height: 100vh;
   width: 100%;
-  border-top: 0.2em solid #f0353c;
-  border-right: 0.2em solid #f0353c;
+  border-top: 0.5rem solid #fdc331;
+  border-right: 0.5rem solid #fe5722;
+  border-radius: 0 1rem 1rem 0;
   background: transparent;
 }
 
@@ -261,18 +262,18 @@
 
 .main__content .main-section__wrapper .main-section__title {
   width: 100%;
-  padding: 1em 0 1em 1em;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .main__content .main-section__wrapper .main-section__title .header__main {
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper,
 .main__content .main-section__wrapper .description__card--hobby {
   position: relative;
   width: 100%;
-  padding: 1em;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +289,7 @@
 
 .main__content .main-section__wrapper .description-card__wrapper .description__header,
 .main__content .main-section__wrapper .description__card--hobby .description__header {
-  padding: 0 0 1em 0;
+  padding: 0 0 1rem 0;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper .description__header .header__text,
@@ -298,13 +299,13 @@
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card,
 .main__content .main-section__wrapper .description__card--hobby .description__card {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge,
 .main__content .main-section__wrapper .description__card--hobby .description__card--knowledge {
-  width: 100em;
-  padding: 1em;
+  width: 100rem;
+  padding: 1rem;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list,
@@ -316,13 +317,13 @@
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container,
 .main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container {
-  width: 5em;
-  padding: 0.5em;
+  width: 5rem;
+  padding: 0.5rem;
 }
 
 .main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
@@ -365,15 +366,15 @@
 
 .projects-examples .project-example__card {
   position: relative;
-  width: 16em;
-  height: 16em;
+  width: 16rem;
+  height: 16rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 2em;
+  border-radius: 1rem;
   -webkit-box-shadow: 0 0 20px #f0353c;
           box-shadow: 0 0 20px #f0353c;
   overflow: hidden;
-  margin: 1em;
+  margin: 1rem;
 }
 
 .projects-examples .project-example__card .project-example__description--hover {
@@ -417,32 +418,18 @@
 
 .projects-examples .project-example__card .project-description__buttons--wrapper .project-description__button {
   width: 49%;
-  height: 3em;
+  height: 3rem;
   opacity: 1;
   border: none;
   background: #fdc331;
   font-family: "Bevan", cursive;
-  font-size: 1em;
+  font-size: 1rem;
   text-shadow: 1px 1px 1px #b4213d;
   cursor: pointer;
 }
 
-.projects-examples .description__card--contact {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.projects-examples .description__card--contact .card {
-  width: 75%;
-}
-
-.projects-examples .description__card--contact .card .card__text {
-  font-family: "Zilla Slab", serif;
+.projects-examples .main__content .section__contact {
+  padding: 1rem;
 }
 
 .projects-examples .footer {
@@ -465,7 +452,7 @@
 .projects-examples .footer .footer__wrapper .footer__text {
   width: inherit;
   font-family: "Zilla Slab", serif;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   font-weight: bold;
   color: white;
   text-align: center;

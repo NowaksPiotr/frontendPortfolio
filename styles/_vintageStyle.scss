@@ -18,12 +18,13 @@
 
 // GENERAL *********************************************
 .main-section__wrapper {
-  padding-top: 4.5em;
-  margin: 0 0 4em 0;
+  padding-top: 4.5rem;
+  margin: 0 0 4rem 0;
   min-height: 100vh;
   width: 100%;
-  border-top: .2em solid $lighPinkMainColor;
-  border-right: .2em solid $lighPinkMainColor;
+  border-top: 0.5rem solid $yellowMainColor;
+  border-right: 0.5rem solid $orangeMainColor;
+  border-radius: 0 1rem 1rem 0;
   background: transparent;
   &.main-section__wrapper:last-child {
     margin: 0;
@@ -106,40 +107,40 @@
   .main-section__wrapper {
     .main-section__title {
       width: 100%;
-      padding: 1em 0 1em 1em;
+      padding: 1rem 0 1rem 1rem;
       .header__main {
-        padding-left: 0.5em;
+        padding-left: 0.5rem;
       }
     }
     .description-card__wrapper,
     .description__card--hobby {
       position: relative;
       width: 100%;
-      padding: 1em;
+      padding: 1.5rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       .description__header {
-        padding: 0 0 1em 0;
+        padding: 0 0 1rem 0;
         .header__text {
           font-weight: bold;
         }
       }
       .description__card {
-        padding: 1em;
+        padding: 1rem;
       }
       .description__card--knowledge {
-        width: 100em;
-        padding: 1em;
+        width: 100rem;
+        padding: 1rem;
         .knowledge__list {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
-          padding-top: 1em;
+          padding-top: 1rem;
           .logo__container {
-            width: 5em;
-            padding: 0.5em;
+            width: 5rem;
+            padding: 0.5rem;
             .logo__image {
               width: 100%;
               transition: $transitionDurationHalfSec;
@@ -171,13 +172,13 @@
   flex-wrap: wrap;
   .project-example__card {
     position: relative;
-    width: 16em;
-    height: 16em;
+    width: 16rem;
+    height: 16rem;
     box-sizing: border-box;
-    border-radius: 2em;
+    border-radius: 1rem;
     box-shadow: 0 0 20px $lighPinkMainColor;
     overflow: hidden;
-    margin: 1em;
+    margin: 1rem;
     .project-example__description--hover {
       position: absolute;
       top: 0;
@@ -208,12 +209,12 @@
       justify-content: space-between;
       .project-description__button {
         width: 49%;
-        height: 3em;
+        height: 3rem;
         opacity: 1;
         border: none;
         background: $yellowMainColor;
         font-family: $mainBigHeadersFont;
-        font-size: 1em;
+        font-size: 1rem;
         text-shadow: 1px 1px 1px $pinkMainColor;
         cursor: pointer;
       }
@@ -221,15 +222,9 @@
   }
   // PROJECTS PAGE ****************************************
   // CONTACT PAGE *****************************************
-  .description__card--contact {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .card {
-      width: 75%;
-      .card__text {
-        font-family: $regularTextFont;
-      }
+  .main__content {
+    .section__contact {
+      padding: 1rem;
     }
   }
   // CONTACT PAGE *****************************************
@@ -247,7 +242,7 @@
       .footer__text {
         width: inherit;
         font-family: $regularTextFont;
-        font-size: 0.7em;
+        font-size: 0.7rem;
         font-weight: bold;
         color: $colorWhite;
         text-align: center;
@@ -255,15 +250,15 @@
     }
   }
 }
-.changer{
+.changer {
   position: fixed;
   top: 50%;
   left: 85%;
   z-index: 299;
 }
-.darkLoader{
+.darkLoader {
   display: none;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -274,11 +269,21 @@
   animation: show 1s ease-in;
 }
 @keyframes show {
-  from { opacity: 0;}
-  to { opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes hide {
-  0%{ o1pacity: 1}
-  50% { opacity: 0;}
-  100% { display: none;}
+  0% {
+    o1pacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
 }
