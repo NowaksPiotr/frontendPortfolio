@@ -1,5 +1,3 @@
-@import "./variables";
-
 /* ============================================
 
 
@@ -112,8 +110,7 @@
         padding-left: 0.5rem;
       }
     }
-    .description-card__wrapper,
-    .description__card--hobby {
+    .description-card__wrapper{
       position: relative;
       width: 100%;
       padding: 1.5rem;
@@ -160,7 +157,11 @@
         }
       }
     }
+    .description-card__wrapper--contact{
+      padding: 1rem;
+    }
   }
+
 }
 // ABOUT-ME PAGE ****************************************
 // PROJECTS PAGE ****************************************
@@ -221,14 +222,8 @@
     }
   }
   // PROJECTS PAGE ****************************************
-  // CONTACT PAGE *****************************************
-  .main__content {
-    .section__contact {
-      padding: 1rem;
-    }
-  }
-  // CONTACT PAGE *****************************************
-  // CONTACT PAGE *****************************************
+// CONTACT PAGE *****************************************
+// CONTACT PAGE *****************************************
   // FOOTER ***********************************************
   .footer {
     position: relative;

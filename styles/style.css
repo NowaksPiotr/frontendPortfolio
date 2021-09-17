@@ -269,8 +269,7 @@
   padding-left: 0.5rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper,
-.main__content .main-section__wrapper .description__card--hobby {
+.main__content .main-section__wrapper .description-card__wrapper {
   position: relative;
   width: 100%;
   padding: 1.5rem;
@@ -287,29 +286,24 @@
           align-items: center;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__header,
-.main__content .main-section__wrapper .description__card--hobby .description__header {
+.main__content .main-section__wrapper .description-card__wrapper .description__header {
   padding: 0 0 1rem 0;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__header .header__text,
-.main__content .main-section__wrapper .description__card--hobby .description__header .header__text {
+.main__content .main-section__wrapper .description-card__wrapper .description__header .header__text {
   font-weight: bold;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card,
-.main__content .main-section__wrapper .description__card--hobby .description__card {
+.main__content .main-section__wrapper .description-card__wrapper .description__card {
   padding: 1rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge {
   width: 100rem;
   padding: 1rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,21 +314,18 @@
   padding-top: 1rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container {
   width: 5rem;
   padding: 0.5rem;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image {
   width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image:hover,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .logo__image:hover {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .logo__image:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 0.5s;
@@ -343,12 +334,15 @@
           filter: drop-shadow(0px 0px 3px black);
 }
 
-.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption,
-.main__content .main-section__wrapper .description__card--hobby .description__card--knowledge .knowledge__list .logo__container .figcaption {
+.main__content .main-section__wrapper .description-card__wrapper .description__card--knowledge .knowledge__list .logo__container .figcaption {
   width: 100%;
   background: #f0353c;
   color: white;
   text-align: center;
+}
+
+.main__content .main-section__wrapper .description-card__wrapper--contact {
+  padding: 1rem;
 }
 
 .projects-examples {
@@ -426,10 +420,6 @@
   font-size: 1rem;
   text-shadow: 1px 1px 1px #b4213d;
   cursor: pointer;
-}
-
-.projects-examples .main__content .section__contact {
-  padding: 1rem;
 }
 
 .projects-examples .footer {
