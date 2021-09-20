@@ -87,7 +87,7 @@
   }
 }
 
-.styleSwitchButton__wrapper {
+.style-switch-button__wrapper {
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
@@ -96,12 +96,12 @@
   align-items: center;
   z-index: 999;
 
-  .styleSwitchButton {
+  .style-switch-button {
     height: 0;
     width: 0;
     visibility: hidden;
   }
-  .styleSwitchButton__label {
+  .style-switch-button__label {
     width: 4rem;
     height: 2rem;
     display: block;
@@ -122,15 +122,15 @@
       transition: 0.3s;
     }
   }
-  .styleSwitchButton:checked + .styleSwitchButton__label {
+  .style-switch-button:checked + .style-switch-button__label {
     background: $lighPinkMainColor;
     transition: 0.5s;
   }
-  .styleSwitchButton:checked + .styleSwitchButton__label::after {
+  .style-switch-button:checked + .style-switch-button__label::after {
     left: calc(100% - 0.25rem);
     transform: translateX(-100%);
   }
-  .styleSwitchButton__label:active::after {
+  .style-switch-button__label:active::after {
     width: 2rem;
   }
   // below to be changed
@@ -450,11 +450,15 @@
       overflow: hidden;
     }
     .portrait__photo--vintage {
-      width: 100%; // to be checked if can be global
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: none;
       .portrait__photo-image--vintage {
         width: 75%;
-        transform: translateX(10%);
-        border-radius: none;
+        transform: translate(10%, -30%);
+        border-radius: 0;
       }
     }
   }

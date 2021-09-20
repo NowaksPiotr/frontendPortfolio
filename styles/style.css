@@ -176,7 +176,7 @@
   padding: 1rem 0 1rem 2rem;
 }
 
-.styleSwitchButton__wrapper {
+.style-switch-button__wrapper {
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
@@ -191,13 +191,13 @@
   z-index: 999;
 }
 
-.styleSwitchButton__wrapper .styleSwitchButton {
+.style-switch-button__wrapper .style-switch-button {
   height: 0;
   width: 0;
   visibility: hidden;
 }
 
-.styleSwitchButton__wrapper .styleSwitchButton__label {
+.style-switch-button__wrapper .style-switch-button__label {
   width: 4rem;
   height: 2rem;
   display: block;
@@ -208,7 +208,7 @@
   text-indent: -9999px;
 }
 
-.styleSwitchButton__wrapper .styleSwitchButton__label::after {
+.style-switch-button__wrapper .style-switch-button__label::after {
   content: "";
   position: absolute;
   top: 0.25rem;
@@ -221,23 +221,23 @@
   transition: 0.3s;
 }
 
-.styleSwitchButton__wrapper .styleSwitchButton:checked + .styleSwitchButton__label {
+.style-switch-button__wrapper .style-switch-button:checked + .style-switch-button__label {
   background: #f0353c;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.styleSwitchButton__wrapper .styleSwitchButton:checked + .styleSwitchButton__label::after {
+.style-switch-button__wrapper .style-switch-button:checked + .style-switch-button__label::after {
   left: calc(100% - 0.25rem);
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.styleSwitchButton__wrapper .styleSwitchButton__label:active::after {
+.style-switch-button__wrapper .style-switch-button__label:active::after {
   width: 2rem;
 }
 
-.styleSwitchButton__wrapper p {
+.style-switch-button__wrapper p {
   padding-left: 1rem;
 }
 
@@ -639,14 +639,18 @@
 }
 
 .home-content__wrapper--vintage .portrait__wrapper--vintage .portrait__photo--vintage {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  background: none;
 }
 
 .home-content__wrapper--vintage .portrait__wrapper--vintage .portrait__photo--vintage .portrait__photo-image--vintage {
   width: 75%;
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
-  border-radius: none;
+  -webkit-transform: translate(10%, -30%);
+          transform: translate(10%, -30%);
+  border-radius: 0;
 }
 
 .home-content__wrapper--vintage .home-text__wrapper--vintage .home-text__container--vintage {
