@@ -33,7 +33,26 @@
 .project-description__buttons--wrapper,
 .description__card--contact,
 .footer,
-.footer__wrapper {
+.footer__wrapper,
+.main-section__wrapper--vintage,
+.background__wrapper--vintage
+.background__picture--vintage,
+.loading__cover--vintage,
+.home-content__wrapper--vintage,
+.portrait__photo--vintage,
+.portrait__photo-image--vintage,
+.main-section__title--vintage,
+.description-card__wrapper--vintage,
+.description__card--hobby--vintage,
+.logo__image--vintage,
+.figcaption--vintage,
+.projects-examples--vintage,
+.project-example__description--hover--vintage,
+.project__thumb--vintage,
+.project-description__buttons--wrapper--vintage,
+.description__card--contact--vintage,
+.footer--vintage,
+.footer__wrapper--vintage {
   width: 100%;
 }
 
@@ -166,6 +185,8 @@
   top: 0;
   left: 0;
   height: $deviceHeight;
+  picture{
+    height: inherit;
   .background__picture {
     height: inherit;
     position: fixed;
@@ -176,6 +197,7 @@
     transform-origin: 0;
     animation: wobble 15s infinite;
   }
+}
 }
 .home-content__wrapper {
   position: absolute;
@@ -392,12 +414,12 @@
     min-height: 35vh;
     height: 50vh;
   }
-  .main-section__title {
+  .main-section__title--vintage {
     // padding: 1rem 0 1rem 2rem; to be checked !!!!!!!!!!!!!!!!!!!!
   }
 }
 // GENERAL *********************************************
-.internal-link {
+.internal-link--vintage {
   font-style: italic;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -416,28 +438,28 @@
     display: none;
   }
 }
-.home-content__wrapper {
+.home-content__wrapper--vintage {
   position: absolute;
   display: flex;
   justify-content: space-around;
-  .portrait__wrapper {
-    .portrait__photo-bg {
+  .portrait__wrapper--vintage {
+    .portrait__photo-bg--vintage {
       background-color: $colorWhite;
       box-shadow: 0px -10px 20px rgb(177, 177, 177);
       border-radius: 50%;
       overflow: hidden;
     }
-    .portrait__photo {
+    .portrait__photo--vintage {
       width: 100%; // to be checked if can be global
-      .portrait__photo-image {
+      .portrait__photo-image--vintage {
         width: 75%;
         transform: translateX(10%);
         border-radius: none;
       }
     }
   }
-  .home-text__wrapper {
-    .home-text__container {
+  .home-text__wrapper--vintage {
+    .home-text__container--vintage {
       border: none;
       padding: none;
     }
@@ -445,30 +467,30 @@
 }
 // WELCOMING PAGE***************************************
 // ABOUT-ME PAGE****************************************
-.main-section__title {
+.main-section__title--vintage {
   padding: 1rem 0 1rem 1rem;
-  .header__main {
+  .header__main--vintage {
     padding-left: 0.5rem;
   }
 }
-.description-card__wrapper {
+.description-card__wrapper--vintage {
   flex-wrap: wrap;
   align-items: center;
-  .description__card--flex {
+  .description__card--flex--vintage {
     padding: 1rem;
   }
 }
-.description-card__wrapper--contact {
+.description-card__wrapper--contact--vintage {
   padding: 1rem;
 }
 // ABOUT-ME PAGE ****************************************
 // PROJECTS PAGE ****************************************
-.projects-examples {
-  .project-example__card {
+.projects-examples--vintage {
+  .project-example__card--vintage {
     border-radius: 1rem;
     box-shadow: 0 0 20px $lighPinkMainColor;
-    .project-description__buttons--wrapper {
-      .project-description__button {
+    .project-description__buttons--wrapper--vintage {
+      .project-description__button--vintage {
         background: $yellowMainColor;
         font-family: $mainBigHeadersFont;
         text-shadow: 1px 1px 1px $pinkMainColor;
@@ -484,11 +506,11 @@
   
   // CONTACT PAGE *****************************************
   // FOOTER ***********************************************
-  .footer {
+  .footer--vintage {
     background: $menuBackgroundColor; //should be green
-    .footer__wrapper {
+    .footer__wrapper--vintage {
       width: 100%;
-      .footer__text {
+      .footer__text--vintage {
         font-family: $regularTextFont; // should be vintage
         font-weight: bold;
       }
