@@ -10,10 +10,15 @@
 
 =========================================*/
 
+/*=========================================
+===========================================
+=========================================*/
+
 // 1. Global styles
 .main-section__wrapper,
 .background__wrapper,
 .background__picture,
+.loading__cover,
 .home-content__wrapper,
 .portrait__photo,
 .portrait__photo-image,
@@ -50,7 +55,6 @@
   min-height: 100vh;
   margin: 0 0 5rem 0;
   padding-top: 4.5rem;
-  // background: $mainBodyColor;
   background: rgba(249, 249, 249, 0.5);
   border-radius: 30px;
   border-left: 3px solid $lighPinkMainColor;
@@ -65,7 +69,7 @@
 }
 
 .styleSwitchButton__wrapper {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   left: 1.5rem;
   display: flex;
@@ -110,17 +114,18 @@
   .styleSwitchButton__label:active::after {
     width: 2rem;
   }
+  // below to be changed
   p {
     padding-left: 1rem;
   }
 }
+// above to be changed
 
 .loading__cover {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100vh;
   background-image: linear-gradient(to right, $mainBodyColor, $purpleMainColor);
   background-size: 400%;
@@ -171,9 +176,6 @@
     transform-origin: 0;
     animation: wobble 15s infinite;
   }
-  picture {
-    height: inherit;
-  }
 }
 .home-content__wrapper {
   position: absolute;
@@ -182,7 +184,6 @@
   left: 0;
   display: flex;
   justify-content: center;
-
   .portrait__wrapper {
     position: relative;
     display: flex;
@@ -204,7 +205,6 @@
       transform: translateY(40%);
       border-radius: 30px;
       background: $mainBodyColor;
-      // box-shadow: $innerShadow;
       .portrait__photo-image {
         position: inherit;
         transform: translateY(-42%);
@@ -230,8 +230,7 @@
 
 // ABOUT-ME PAGE****************************************
 
-.description-card__wrapper,
-.description__card--hobby {
+.description-card__wrapper {
   position: relative;
   font-family: $mainFont;
   padding: 0 2rem;
@@ -377,6 +376,125 @@
 }
 // FOOTER ***********************************************
 
+/*=========================================
+===========================================
+=========================================*/
+.main-section__wrapper--vintage {
+  min-height: 100vh;
+  margin: 0 0 4rem 0;
+  background: transparent;
+  border-radius: 0 1rem 1rem 0;
+  border-top: 0.5rem solid $yellowMainColor;
+  border-right: 0.5rem solid $orangeMainColor;
+  border-left: none;
+  box-shadow: none;
+  &.main-section__wrapper--vintage:last-child {
+    min-height: 35vh;
+    height: 50vh;
+  }
+  .main-section__title {
+    // padding: 1rem 0 1rem 2rem; to be checked !!!!!!!!!!!!!!!!!!!!
+  }
+}
+// GENERAL *********************************************
+.internal-link {
+  font-style: italic;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+// WELCOMING PAGE***************************************
+.background__wrapper--vintage {
+  background: linear-gradient(
+    $mainBodyColor 0 50vh,
+    $yellowMainColor 0 60vh,
+    $orangeMainColor 0 70vh,
+    $lighPinkMainColor 0 80vh,
+    $pinkMainColor 0 90vh,
+    $purpleMainColor 0 100vh
+  );
+  .background__picture--vintage {
+    display: none;
+  }
+}
+.home-content__wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  .portrait__wrapper {
+    .portrait__photo-bg {
+      background-color: $colorWhite;
+      box-shadow: 0px -10px 20px rgb(177, 177, 177);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .portrait__photo {
+      width: 100%; // to be checked if can be global
+      .portrait__photo-image {
+        width: 75%;
+        transform: translateX(10%);
+        border-radius: none;
+      }
+    }
+  }
+  .home-text__wrapper {
+    .home-text__container {
+      border: none;
+      padding: none;
+    }
+  }
+}
+// WELCOMING PAGE***************************************
+// ABOUT-ME PAGE****************************************
+.main-section__title {
+  padding: 1rem 0 1rem 1rem;
+  .header__main {
+    padding-left: 0.5rem;
+  }
+}
+.description-card__wrapper {
+  flex-wrap: wrap;
+  align-items: center;
+  .description__card--flex {
+    padding: 1rem;
+  }
+}
+.description-card__wrapper--contact {
+  padding: 1rem;
+}
+// ABOUT-ME PAGE ****************************************
+// PROJECTS PAGE ****************************************
+.projects-examples {
+  .project-example__card {
+    border-radius: 1rem;
+    box-shadow: 0 0 20px $lighPinkMainColor;
+    .project-description__buttons--wrapper {
+      .project-description__button {
+        background: $yellowMainColor;
+        font-family: $mainBigHeadersFont;
+        text-shadow: 1px 1px 1px $pinkMainColor;
+      }
+    }
+  }
+  // PROJECTS PAGE ****************************************
+  // CONTACT PAGE *****************************************
+
+
+  // ---------------- need to be added!!!!!!!
+  
+  
+  // CONTACT PAGE *****************************************
+  // FOOTER ***********************************************
+  .footer {
+    background: $menuBackgroundColor; //should be green
+    .footer__wrapper {
+      width: 100%;
+      .footer__text {
+        font-family: $regularTextFont; // should be vintage
+        font-weight: bold;
+      }
+    }
+  }
+}
 // ANIMATIONS *******************************************
 @keyframes wobble {
   0% {
@@ -415,16 +533,5 @@
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes bg {
-  0% {
-    background-position: left;
-  }
-  50% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
   }
 }
