@@ -167,7 +167,15 @@
 }
 
 .main-section__wrapper.main-section__wrapper:last-child {
+  min-height: 35vh;
+  height: 50vh;
   margin: 0;
+}
+
+.internal-link {
+  font-style: italic;
+  color: black;
+  text-decoration: none;
 }
 
 .background__wrapper {
@@ -538,13 +546,6 @@ body {
 
 .span__bold {
   font-weight: bold;
-}
-
-.internal-link {
-  text-decoration: underline;
-  color: #671c3b;
-  font-weight: bold;
-  font-style: italic;
 }
 
 .footer {

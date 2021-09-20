@@ -25,10 +25,19 @@
   border-radius: 0 1rem 1rem 0;
   background: transparent;
   &.main-section__wrapper:last-child {
+    min-height: 35vh;
+    height: 50vh;
     margin: 0;
   }
+
 }
 // GENERAL *********************************************
+.internal-link{
+  font-style: italic;
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+
+}
 // WELCOMING PAGE***************************************
 .background__wrapper {
   position: relative;
