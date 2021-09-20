@@ -119,6 +119,71 @@
   width: 100%;
 }
 
+.styleSwitchButton__wrapper {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+}
+
+.styleSwitchButton__wrapper .styleSwitchButton {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.styleSwitchButton__wrapper .styleSwitchButton__label {
+  width: 4rem;
+  height: 2rem;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background: #bfffbf;
+  border-radius: 1rem;
+  text-indent: -9999px;
+}
+
+.styleSwitchButton__wrapper .styleSwitchButton__label::after {
+  content: '';
+  position: absolute;
+  top: .25rem;
+  left: .25rem;
+  width: 1.5rem;
+  height: 1.5em;
+  border-radius: 1.5rem;
+  background: #f9f9f9;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.styleSwitchButton__wrapper .styleSwitchButton:checked + .styleSwitchButton__label {
+  background: #f0353c;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.styleSwitchButton__wrapper .styleSwitchButton:checked + .styleSwitchButton__label::after {
+  left: calc(100% - .25rem);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.styleSwitchButton__wrapper .styleSwitchButton__label:active::after {
+  width: 2rem;
+}
+
+.styleSwitchButton__wrapper p {
+  padding-left: 1rem;
+}
+
 .description__text {
   line-height: 2rem;
 }
