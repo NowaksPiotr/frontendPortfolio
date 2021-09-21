@@ -1,32 +1,36 @@
 $deviceWidth: 50vw;
 $deviceHeight: 100vh;
 $transitionDurationHalfSec: 0.5s;
-$lol: 50px;
 
-// Fonts
+// Typography
 $mainFont: "Red Hat Display", sans-serif;
+$regularTextFont: arial;
+$mainBigHeadersFont: 3rem;
+$navigationFont: arial;
+
+
 $mainFontColor: rgb(99, 99, 99);
-// colors
+// 
+
+// modern colors
 $mainBodyColor: rgb(249, 249, 249);
 $navButtonsColor: rgb(239, 239, 239);
 $shadowBlackOp02: rgba(0,0,0, .2);
 $blackOp06: rgba(0,0,0, .6);
-$lighPinkMainColor: rgb(240, 53, 60);
-$purpleMainColor: rgb(103, 28, 59);
 $colorWhite: rgb(255, 255, 255);
 $menuBackgroundColor: rgb(99, 99, 99);
-
+$menuBackgroundColorV: rgb(12,175,12);
+//shared colors,
+$lighPinkMainColor: rgb(240, 53, 60);
+$purpleMainColor: rgb(103, 28, 59);
 
 //temp clrs
-$yellowMainColor: yellow;
-$orangeMainColor: orange;
-$pinkMainColor: pink;
-$mainBigHeadersFont: 3rem;
-$regularTextFont: arial;
+$yellowMainColor: rgb(253, 195, 49);;
+$orangeMainColor: rgb(254, 87, 34);
+$pinkMainColor: rgb(180, 33, 61);
 
 // Shadows
 $outerShadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2),
   -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
 $innerShadow: inset 3px 3px 10px rgba(0, 0, 0, 0.4),
   inset -3px -3px 10px rgba(255, 255, 255, 0.3);
-//mixins
