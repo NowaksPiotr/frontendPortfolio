@@ -247,3 +247,90 @@
     }
   }
 }
+//=========================================================
+// NAVIGATION BAR ******************************************
+@media (min-width: 10px) {
+  .navigation--vintage {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: -$deviceWidth * 10;
+    opacity: 0;
+    box-sizing: border-box;
+    list-style: none;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $menuBackgroundColor;
+    transition: $transitionDurationHalfSec;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  }
+  .navigation__item--vintage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: .5em 0 .5em 0;
+    .navigation__link--vintage {
+      font-size: 1.2em;
+      width: 100%;
+      color: $colorWhite;
+      padding: 0.5em 1em 0.5em 1em;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+  .navigation--show--vintage {
+    top: 0;
+    transition: $transitionDurationHalfSec;
+    opacity: 1;
+  }
+  //  Hamburger menu button  //
+  .navigation__mobile-button--vintage {
+    position: fixed;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    top: 2em;
+    right: 2em;
+    border: none;
+    background: rgb(0, 0, 0);
+    width: $deviceWidth/17;
+    min-width: 10px;
+    max-width: 35px;
+    height: 3px;
+    transition: $transitionDurationHalfSec;
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: inherit;
+      min-width: inherit;
+      max-width: inherit;
+      height: inherit;
+      background: inherit;
+    }
+    &::before {
+      top: -6px;
+      transition: $transitionDurationHalfSec;
+    }
+    &::after {
+      top: 6px;
+      transition: $transitionDurationHalfSec;
+    }
+  }
+  .navigation__mobile-button--on--vintage {
+    transform: translateX($deviceWidth/44);
+    transition: $transitionDurationHalfSec;
+    background: $colorWhite;
+    &::before,
+    &::after {
+      transform: translateX(-$deviceWidth/44);
+    }
+  }
+  // Hamburger menu button end  //
+}
+// NAVIGATION BAR ******************************************

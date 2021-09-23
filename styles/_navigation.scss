@@ -1,5 +1,5 @@
 .navigation__mobile-button {
-  display: none;
+  display: block;
 }
 .nav__wrapper {
   font-family: $mainFont;
@@ -62,45 +62,39 @@
 // V I N T A G E    B E L O W
 //=========================================================
 
-.navigation__mobile-button {
-  display: none;
-}
 .nav__wrapper--vintage {
   font-family: $navigationFont;
   position: relative;
   width: 100%;
+  z-index: 9999;
   .navigation--vintage {
     position: fixed;
+    margin: 0;
+    padding: 0.5em 0 0.5em 0;
+    width: inherit;
+    list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: $menuBackgroundColorV;
+    background: $menuBackgroundColor;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
     .navigation__item--vintage:last-child {
       margin: 0 1em 0 0;
     }
     .navigation__item--vintage {
-      margin: 0;
       padding: 0.5em;
-      background: none;
-      box-shadow: none;
-      display: block;
-      width: 100%;
-      height: 2em;
-      border-radius: 0;
       .navigation__link--vintage {
-        font-size: 1.5rem;
+        font-size: 1.5em;
         color: $colorWhite;
+        width: 100%;
         text-decoration: none;
-        text-shadow: none;
         &:hover {
-          color: $colorWhite;
           text-shadow: -4px -8px 2px $yellowMainColor,
             -8px -16px 4px $purpleMainColor;
+          transition: $transitionDurationHalfSec;
         }
       }
       .navigation__link--active--vintage {
-        color: $colorWhite;
         text-shadow: -4px -8px 2px $yellowMainColor,
           -8px -16px 4px $purpleMainColor;
       }
