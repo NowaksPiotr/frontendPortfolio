@@ -325,8 +325,8 @@
   -webkit-box-shadow: 0px 2px 5px black;
           box-shadow: 0px 2px 5px black;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 10vw;
+  height: 10vw;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
 }
@@ -542,6 +542,7 @@
   top: 0;
   left: 0;
   height: 100%;
+  padding: 1em;
   color: white;
   opacity: 0;
   -webkit-transition: 0.8s;
@@ -559,7 +560,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 150%;
+  -webkit-transform: translateX(-16.75%);
+          transform: translateX(-16.75%);
 }
 
 .projects-examples .project-example__card .project-description__buttons--wrapper {
@@ -576,13 +579,18 @@
 .projects-examples .project-example__card .project-description__buttons--wrapper .project-description__button {
   width: 49%;
   height: 3rem;
-  opacity: 1;
   border: none;
+  padding: .75em 0;
+  background: #f9f9f9;
   -webkit-box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), -6px -6px 15px 0 rgba(255, 255, 255, 0.5), 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
   font-family: "Red Hat Display", sans-serif;
   font-size: 1em;
+  text-align: center;
   text-shadow: 1px 1px 3px #f0353c;
+  text-decoration: none;
+  color: black;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -1185,12 +1193,12 @@ body {
   }
   .navigation__mobile-button--vintage::before, .navigation__mobile-button--vintage::after {
     position: absolute;
+    height: inherit;
+    width: inherit;
     left: 0;
     content: "";
-    width: inherit;
     min-width: inherit;
     max-width: inherit;
-    height: inherit;
     background: inherit;
   }
   .navigation__mobile-button--vintage::before {

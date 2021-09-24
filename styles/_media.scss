@@ -305,12 +305,12 @@
     &::before,
     &::after {
       position: absolute;
+      height: inherit;
+      width: inherit;
       left: 0;
       content: "";
-      width: inherit;
       min-width: inherit;
       max-width: inherit;
-      height: inherit;
       background: inherit;
     }
     &::before {
