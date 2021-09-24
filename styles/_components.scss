@@ -35,8 +35,7 @@
 .footer,
 .footer__wrapper,
 .main-section__wrapper--vintage,
-.background__wrapper--vintage
-.background__picture--vintage,
+.background__wrapper--vintage .background__picture--vintage,
 .loading__cover--vintage,
 .home-content__wrapper--vintage,
 .portrait__photo--vintage,
@@ -151,7 +150,7 @@
   background-position: left;
   z-index: 10000;
   opacity: 1;
-  animation: showUp 1s ease-in;
+  animation: showUp .5s ease-in;
   .loading__textAndCircle-wrapper {
     width: inherit;
     height: inherit;
@@ -185,19 +184,19 @@
   top: 0;
   left: 0;
   height: $deviceHeight;
-  picture{
+  picture {
     height: inherit;
-  .background__picture {
-    height: inherit;
-    position: fixed;
-    top: -20%;
-    left: -18%;
-    opacity: 0.2;
-    transform: rotate(15deg);
-    transform-origin: 0;
-    animation: wobble 15s infinite;
+    .background__picture {
+      height: inherit;
+      position: fixed;
+      top: -20%;
+      left: -18%;
+      opacity: 0.2;
+      transform: rotate(15deg);
+      transform-origin: 0;
+      animation: wobble 15s infinite;
+    }
   }
-}
 }
 .home-content__wrapper {
   position: absolute;
@@ -376,6 +375,9 @@
     transform: translateY(20%);
     filter: drop-shadow(7px 7px 2px $blackOp06);
   }
+  .plant__image--vintage {
+    display: none;
+  }
 }
 // CONTACT PAGE *****************************************
 
@@ -504,14 +506,10 @@
   // PROJECTS PAGE ****************************************
   // CONTACT PAGE *****************************************
 
-
-  // ---------------- need to be added!!!!!!!
-  
-  
   // CONTACT PAGE *****************************************
   // FOOTER ***********************************************
   .footer--vintage {
-    background: $menuBackgroundColor; //should be green
+    background: $menuBackgroundColorV; //should be green
     .footer__wrapper--vintage {
       width: 100%;
       .footer__text--vintage {
@@ -521,6 +519,7 @@
     }
   }
 }
+
 // ANIMATIONS *******************************************
 @keyframes wobble {
   0% {

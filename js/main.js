@@ -36,10 +36,11 @@ let projectDescriptionButtonsWrapper = document.querySelectorAll(
 let projectDescriptionButton = document.querySelectorAll(
   ".project-description__button"
 );
+let plantImage = document.querySelector('.plant__image');
 let footer = document.querySelector(".footer");
 let footerWrapper = document.querySelector(".footer__wrapper");
 let footerText = document.querySelector(" .footer__text");
-
+let loadingCover = document.querySelector(".loading__cover");
 //-----------------------------------------------------------------------------
 
 let vintage = "--vintage";
@@ -48,9 +49,16 @@ let styleSwitch = document.querySelector(".style-switch-button");
 // ============================================================================
 // ============================================================================
 
-styleSwitch.addEventListener("click", styleChange);
+styleSwitch.addEventListener("click", changeStyle);
 
-function styleChange() {
+function changeStyle(){
+  loadingCover.style.display = 'block';
+  setTimeout(toggleClasses, 1000);
+  setTimeout(()=>{loadingCover.style.display = 'none'}, 3000);
+}
+
+
+function toggleClasses() {
   if (navigation.classList.contains("navigation" + vintage)) {
     navWrapper.classList.remove("nav__wrapper" + vintage);
     navWrapper.classList.add('nav__wrapper');
@@ -88,6 +96,7 @@ function styleChange() {
   );
   projectsExamples.classList.toggle("projects-examples" + vintage);
   homeTextWrapper.classList.toggle("home-text__wrapper" + vintage);
+  plantImage.classList.toggle("plant__image" + vintage);
   footer.classList.toggle("footer" + vintage);
   footerWrapper.classList.toggle("footer__wrapper" + vintage);
   footerText.classList.toggle("footer__text" + vintage);
