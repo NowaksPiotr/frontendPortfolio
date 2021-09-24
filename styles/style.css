@@ -87,17 +87,6 @@
           transform-origin: 0.5s;
 }
 
-/*=========================================
------------TABLE OF CONTENT----------------
-
-1. Global styles
-
-2. Typography
-
-3. Components 
-
-
-=========================================*/
 .main-section__wrapper,
 .background__wrapper,
 .background__picture,
@@ -450,6 +439,11 @@
   color: white;
   text-align: center;
   font-weight: bold;
+}
+
+.description-card__wrapper .description__header--centered,
+.description__card--hobby .description__header--centered {
+  text-align: center;
 }
 
 .projects-examples {
@@ -920,7 +914,7 @@ body {
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1230px) and (orientation: landscape) {
   .nav__wrapper .navigation .navigation__item .navigation__link {
     font-size: 1.5rem;
   }

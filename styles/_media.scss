@@ -217,7 +217,7 @@
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1230px) and (orientation: landscape) {
   .nav__wrapper {
     .navigation {
       .navigation__item {
