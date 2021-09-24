@@ -1,7 +1,7 @@
 // Variables
 
 // DOM Elements that styles will be changed.
-
+let mainContent = document.querySelector(".main__content");
 let navWrapper = document.querySelector(".nav__wrapper");
 let navigation = document.querySelector(".navigation");
 let navItem = document.querySelectorAll(".navigation__item");
@@ -78,7 +78,7 @@ function toggleClasses() {
     mobileHamburger.classList.remove("navigation__mobile-button");
     mobileHamburger.classList.add("navigation__mobile-button" + vintage);
   }
-
+  mainContent.classList.toggle("main__content" + vintage);
   backgroundWrapper.classList.toggle("background__wrapper" + vintage);
   backgroundPicture.classList.toggle("background__picture" + vintage);
   homeContentWrapper.classList.toggle("home-content__wrapper" + vintage);

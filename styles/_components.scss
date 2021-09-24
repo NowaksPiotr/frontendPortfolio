@@ -61,6 +61,7 @@
 }
 .internal-link {
   font-style: italic;
+  font-weight: bold;
   color: $lighPinkMainColor;
   text-decoration: none;
 }
@@ -115,7 +116,7 @@
       top: 0.25rem;
       left: 0.25rem;
       width: 1.5rem;
-      height: 1.5em;
+      height: 1.5rem;
       border-radius: 1.5rem;
       background: $mainBodyColor;
       transition: 0.3s;
@@ -263,6 +264,9 @@
     .header__text {
       font-weight: bold;
     }
+  }
+  .description__header--centred{
+    text-align: center;
   }
   .description__card {
     padding: 1rem;
@@ -423,6 +427,7 @@
 // GENERAL *********************************************
 .internal-link--vintage {
   font-style: italic;
+  font-weight: bold;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
