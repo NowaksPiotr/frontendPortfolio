@@ -151,7 +151,7 @@
   background-position: left;
   z-index: 10000;
   opacity: 1;
-  animation: showUp .5s ease-in;
+  animation: showUp 0.5s ease-in;
   .loading__textAndCircle-wrapper {
     width: inherit;
     height: inherit;
@@ -162,8 +162,8 @@
       box-sizing: border-box;
       box-shadow: 0px 2px 5px black;
       border-radius: 50%;
-      width: 10vw;
-      height: 10vw;
+      width: 7em;
+      height: 7em;
       animation: spin 2s linear infinite;
     }
     .loading__text {
@@ -265,7 +265,7 @@
       font-weight: bold;
     }
   }
-  .description__header--centred{
+  .description__header--centred {
     text-align: center;
   }
   .description__card {
@@ -348,7 +348,7 @@
         width: 49%;
         height: 3rem;
         border: none;
-        padding: .75em 0;
+        padding: 0.75em 0;
         background: $mainBodyColor;
         box-shadow: $outerShadow;
         font-family: $mainFont;
@@ -408,6 +408,9 @@
       text-align: center;
     }
   }
+}
+.footer--vintage {
+  background: $menuBackgroundColorV;
 }
 // FOOTER ***********************************************
 
@@ -520,55 +523,45 @@
 
   // CONTACT PAGE *****************************************
   // FOOTER ***********************************************
-  .footer--vintage {
-    background: $menuBackgroundColorV; //should be green
-    .footer__wrapper--vintage {
-      width: 100%;
-      .footer__text--vintage {
-        font-family: $regularTextFont; // should be vintage
-        font-weight: bold;
-      }
+
+  // ANIMATIONS *******************************************
+  @keyframes wobble {
+    0% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(15deg);
     }
   }
-}
 
-// ANIMATIONS *******************************************
-@keyframes wobble {
-  0% {
-    transform: rotate(15deg);
+  @keyframes showUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  50% {
-    transform: rotate(20deg);
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-
-@keyframes showUp {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes textFlash {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+  @keyframes textFlash {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
