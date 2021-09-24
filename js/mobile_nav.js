@@ -21,24 +21,6 @@ function hamburgerToggle() {
     mobileNavList.classList.toggle("navigation--show");
   }
 }
-
-// function vintageCheck() {
-//   if (isVintage == false) {
-//     isVintage = true;
-//     menuLink.forEach(function activeItem(link, index) {
-//       link.addEventListener("click", () => {
-//         let activeLink = document.querySelector(".navigation__link--active--vintage");
-//         if (activeLink) {
-//           activeLink.classList.remove("navigation__link--active--vintage");
-//         }
-//         menuLink[index].classList.add("navigation__link--active--vintage");
-//       });
-//     });
-//     return isVintage;
-//   }
-//   isVintage = false;
-//   return isVintage;
-// }
 // After click on hamburger menu link hamburger menu will hide and user will be taken to desired element.
 
 hamburgerMenuLink.forEach(function toggler(link, index) {
@@ -53,13 +35,25 @@ hamburgerMenuLink.forEach(function toggler(link, index) {
 //********************************* //
 
 // Function for active menu
-  menuLink.forEach(function activeItem(link, index) {
-    link.addEventListener("click", () => {
-      let activeLink = document.querySelector(".navigation__link--active");
+menuLink.forEach(function activeItem(link, index) {
+  link.addEventListener("click", () => {
+    let activeLink = document.querySelector(".navigation__link--active");
+    let activeLinkVintage = document.querySelector(
+      ".navigation__link--active--vintage"
+    );
+    modernActive();
+    vintageActive();
+    function modernActive() {
       if (activeLink) {
         activeLink.classList.remove("navigation__link--active");
       }
       menuLink[index].classList.add("navigation__link--active");
-    });
+    }
+    function vintageActive() {
+      if (activeLinkVintage) {
+        activeLink.classList.remove("navigation__link--active--vintage");
+      }
+      menuLink[index].classList.add("navigation__link--active--vintage");
+    }
   });
-//********************************* //
+});
